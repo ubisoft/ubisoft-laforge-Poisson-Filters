@@ -1,0 +1,5 @@
+# Recommended python version: 3.7 or newer.
+# The key Python 3.7 feature used in the project is `dataclass <https://docs.python.org/3/library/dataclasses.html#module-dataclasses>`.
+Sphinx
+sphinx_rtd_theme
+sphinxcontrib-video

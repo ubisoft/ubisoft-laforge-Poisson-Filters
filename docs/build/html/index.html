@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Compact Poisson Filters documentation &mdash; Compact Poisson Filters 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting Started" href="quickstart.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Compact Poisson Filters
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes.html">Notes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code_doc.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_index.html">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Compact Poisson Filters</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Welcome to Compact Poisson Filters documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="welcome-to-compact-poisson-filters-documentation">
+<h1>Welcome to Compact Poisson Filters documentation<a class="headerlink" href="#welcome-to-compact-poisson-filters-documentation" title="Permalink to this heading"></a></h1>
+<a class="reference internal image-reference" href="_images/cube_field.gif"><img alt="Cube Field" src="_images/cube_field.gif" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="_images/teaser_filters.png"><img alt="Teaser Filters" src="_images/teaser_filters.png" style="width: 700px;" /></a>
+<p><cite>Compact Poisson filters</cite> are powerful alternatives to iterative linear methods to solve Poisson’s equation <span class="math notranslate nohighlight">\(\nabla^{2} \phi = f\)</span>, particularly for real-time applications, where interactivity is of high importance.</p>
+<p>Poisson filter-based method is a one-shot, convolutional linear solver that balances between the strengths of spectral and
+iterative methods with a parallel implementation on GPU. Our solver precludes the need for careful preconditioning,
+scales favorably with the size of the problem, handles Neumann boundary conditions, and is a drop-in replacement with
+controllable error tolerance for existing solvers in high-performance settings.</p>
+<p>While the main application presented in this work is enhancing the runtime performance of Eulerian fluids simulation, Poisson filters have the potential to be used in other domains that require a fast solution to Poisson’s equation, such as image processing, cloth simulation, Newtonian gravity, and electrostatics. </p>
+<p><strong>Next:</strong> <a class="reference internal" href="quickstart.html#quickstart"><span class="std std-ref">How to run the demos</span></a></p>
+<section id="paper">
+<h2>Paper<a class="headerlink" href="#paper" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="https://dl.acm.org/doi/10.1145/3528233.3530737">“Compact Poisson Filters for Fast Fluid Simulation”</a>, ACM SIGGRAPH 2022 Conference.</p>
+<p>You can also find the paper and its supplements in <cite>docs/paper/</cite>.</p>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="how-to-cite">
+<h2>How To Cite<a class="headerlink" href="#how-to-cite" title="Permalink to this heading"></a></h2>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">BibTeX</span><a class="headerlink" href="#id1" title="Permalink to this code"></a></div>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>@inproceedings<span class="nb">{</span>10.1145/3528233.3530737,
+author = <span class="nb">{</span>Rabbani, Amir Hossein and Guertin, Jean-Philippe and Rioux-Lavoie, Damien and Schoentgen, Arnaud and Tong, Kaitai and Sirois-Vigneux, Alexandre and Nowrouzezahrai, Derek<span class="nb">}</span>,
+title = <span class="nb">{</span>Compact Poisson Filters for Fast Fluid Simulation<span class="nb">}</span>,
+year = <span class="nb">{</span>2022<span class="nb">}</span>,
+isbn = <span class="nb">{</span>9781450393379<span class="nb">}</span>,
+publisher = <span class="nb">{</span>Association for Computing Machinery<span class="nb">}</span>,
+address = <span class="nb">{</span>New York, NY, USA<span class="nb">}</span>,
+url = <span class="nb">{</span>https://doi.org/10.1145/3528233.3530737<span class="nb">}</span>,
+doi = <span class="nb">{</span>10.1145/3528233.3530737<span class="nb">}</span>,
+abstract = <span class="nb">{</span>Poisson equations appear in many graphics settings including, but not limited to, physics-based fluid simulation. Numerical solvers for such problems strike context-specific memory, performance, stability and accuracy trade-offs. We propose a new Poisson filter-based solver that balances between the strengths of spectral and iterative methods. We derive universal Poisson kernels for forward and inverse Poisson problems, leveraging careful adaptive filter truncation to localize their extent, all while maintaining stability and accuracy. Iterative composition of our compact filters improves solver iteration time by orders-of-magnitude compared to optimized linear methods. While motivated by spectral formulations, we overcome important limitations of spectral methods while retaining many of their desirable properties. We focus on the application of our method to high-performance and high-fidelity fluid simulation, but we also demonstrate its broader applicability. We release our source code at https://github.com/Ubisoft-LaForge/CompactPoissonFilters .<span class="nb">}</span>,
+booktitle = <span class="nb">{</span>ACM SIGGRAPH 2022 Conference Proceedings<span class="nb">}</span>,
+articleno = <span class="nb">{</span>35<span class="nb">}</span>,
+numpages = <span class="nb">{</span>9<span class="nb">}</span>,
+keywords = <span class="nb">{</span>iterative methods, reduced modeling<span class="nb">}</span>,
+location = <span class="nb">{</span>Vancouver, BC, Canada<span class="nb">}</span>,
+series = <span class="nb">{</span>SIGGRAPH &#39;22<span class="nb">}</span>
+<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this heading"></a></h2>
+<p>See <a class="reference internal" href="license.html#license-page"><span class="std std-ref">License</span></a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="quickstart.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ubisoft.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentation &mdash; Compact Poisson Filters 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="src.demos package" href="src.demos.html" />
+    <link rel="prev" title="Notes" href="notes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Compact Poisson Filters
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes.html">Notes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="src.demos.html">src.demos package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="src.functions.html">src.functions package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="src.helper.html">src.helper package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="code_index.html">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Compact Poisson Filters</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/code_doc.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="documentation">
+<span id="code-page"></span><h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this heading"></a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Release<span class="colon">:</span></dt>
+<dd class="field-odd"><p>0.1</p>
+</dd>
+<dt class="field-even">Date<span class="colon">:</span></dt>
+<dd class="field-even"><p>May 18, 2023</p>
+</dd>
+<dt class="field-odd">License<span class="colon">:</span></dt>
+<dd class="field-odd"><p>See <a class="reference internal" href="license.html#license-page"><span class="std std-ref">License</span></a></p>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="src.demos.html">src.demos package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="src.demos.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="src.demos.html#module-src.demos.all_examples">src.demos.all_examples module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#quick-access-to-all-demos">Quick access to all demos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.demos.html#technicals">Technicals</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#src.demos.all_examples.DemoName"><code class="docutils literal notranslate"><span class="pre">DemoName</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.demos.html#src.demos.all_examples.DemoName.BOUNDARY_MULTI_MODAL_COMPLEX_OBJECT"><code class="docutils literal notranslate"><span class="pre">DemoName.BOUNDARY_MULTI_MODAL_COMPLEX_OBJECT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.demos.html#src.demos.all_examples.DemoName.BOUNDARY_TILED_MIRROR"><code class="docutils literal notranslate"><span class="pre">DemoName.BOUNDARY_TILED_MIRROR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.demos.html#src.demos.all_examples.DemoName.BOUNDARY_VERSATILE_ERROR_SCENARIOS"><code class="docutils literal notranslate"><span class="pre">DemoName.BOUNDARY_VERSATILE_ERROR_SCENARIOS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.demos.html#src.demos.all_examples.DemoName.CONVERGENCE_ADAPTIVE_TRUNCATION_ANALYSIS"><code class="docutils literal notranslate"><span class="pre">DemoName.CONVERGENCE_ADAPTIVE_TRUNCATION_ANALYSIS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.demos.html#src.demos.all_examples.DemoName.CONVERGENCE_COMPARE_3_METHODS_INFINITE_DOMAIN"><code class="docutils literal notranslate"><span class="pre">DemoName.CONVERGENCE_COMPARE_3_METHODS_INFINITE_DOMAIN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.demos.html#src.demos.all_examples.DemoName.CONVERGENCE_COMPARE_3_METHODS_WALL_NEUMANN_BOUNDARY"><code class="docutils literal notranslate"><span class="pre">DemoName.CONVERGENCE_COMPARE_3_METHODS_WALL_NEUMANN_BOUNDARY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.demos.html#src.demos.all_examples.DemoName.CONVERGENCE_RESIDUAL_COMPARISON_INFINITE_DOMAIN"><code class="docutils literal notranslate"><span class="pre">DemoName.CONVERGENCE_RESIDUAL_COMPARISON_INFINITE_DOMAIN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.demos.html#src.demos.all_examples.DemoName.DECOMPOSITION_EIGENVALUE_ABSORPTION_TEST_2D"><code class="docutils literal notranslate"><span class="pre">DemoName.DECOMPOSITION_EIGENVALUE_ABSORPTION_TEST_2D</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.demos.html#src.demos.all_examples.DemoName.IO_DATABASE_GENERATE_2D"><code class="docutils literal notranslate"><span class="pre">DemoName.IO_DATABASE_GENERATE_2D</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.demos.html#src.demos.all_examples.DemoName.IO_DATABASE_GENERATE_3D"><code class="docutils literal notranslate"><span class="pre">DemoName.IO_DATABASE_GENERATE_3D</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.demos.html#src.demos.all_examples.DemoName.IO_DATABASE_SINGLE_FILTER_2D"><code class="docutils literal notranslate"><span class="pre">DemoName.IO_DATABASE_SINGLE_FILTER_2D</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.demos.html#src.demos.all_examples.DemoName.IO_DATABASE_SINGLE_FILTER_3D"><code class="docutils literal notranslate"><span class="pre">DemoName.IO_DATABASE_SINGLE_FILTER_3D</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.demos.html#src.demos.all_examples.DemoName.IO_GENERATE_FILTERS_EXPORT_HLSLI_2D"><code class="docutils literal notranslate"><span class="pre">DemoName.IO_GENERATE_FILTERS_EXPORT_HLSLI_2D</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.demos.html#src.demos.all_examples.DemoName.IO_GENERATE_FILTERS_EXPORT_HLSLI_3D"><code class="docutils literal notranslate"><span class="pre">DemoName.IO_GENERATE_FILTERS_EXPORT_HLSLI_3D</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.demos.html#src.demos.all_examples.DemoName.IO_PRINT_FILTERS_2D"><code class="docutils literal notranslate"><span class="pre">DemoName.IO_PRINT_FILTERS_2D</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.demos.html#src.demos.all_examples.DemoName.IO_PRINT_FILTERS_3D"><code class="docutils literal notranslate"><span class="pre">DemoName.IO_PRINT_FILTERS_3D</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.demos.html#src.demos.all_examples.DemoName.REDUCTIONS_2D_COMPARE_UNIFIED_STANDARD_KERNELS"><code class="docutils literal notranslate"><span class="pre">DemoName.REDUCTIONS_2D_COMPARE_UNIFIED_STANDARD_KERNELS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.demos.html#src.demos.all_examples.DemoName.REDUCTIONS_2D_PLOT_KERNEL_MODES_FILTERS_CSV_EXPORT"><code class="docutils literal notranslate"><span class="pre">DemoName.REDUCTIONS_2D_PLOT_KERNEL_MODES_FILTERS_CSV_EXPORT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.demos.html#src.demos.all_examples.DemoName.REDUCTIONS_3D_PLOT_FILTERS_TRUNCATION_BEAUTIFIED"><code class="docutils literal notranslate"><span class="pre">DemoName.REDUCTIONS_3D_PLOT_FILTERS_TRUNCATION_BEAUTIFIED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.demos.html#src.demos.all_examples.DemoName.REDUCTIONS_3D_PLOT_KERNEL_MODES_FILTERS_CSV_EXPORT"><code class="docutils literal notranslate"><span class="pre">DemoName.REDUCTIONS_3D_PLOT_KERNEL_MODES_FILTERS_CSV_EXPORT</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#src.demos.all_examples.run_demo"><code class="docutils literal notranslate"><span class="pre">run_demo()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="src.demos.html#module-src.demos.boundary">src.demos.boundary module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#src.demos.boundary.add_subplot_matrix"><code class="docutils literal notranslate"><span class="pre">add_subplot_matrix()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#src.demos.boundary.compare_jacobi_poisson_filters_neumann_individual_ranks"><code class="docutils literal notranslate"><span class="pre">compare_jacobi_poisson_filters_neumann_individual_ranks()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#src.demos.boundary.compare_jacobi_poisson_filters_neumann_simple"><code class="docutils literal notranslate"><span class="pre">compare_jacobi_poisson_filters_neumann_simple()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#src.demos.boundary.demo_multi_modal_solve_neumann_complex_object_2d"><code class="docutils literal notranslate"><span class="pre">demo_multi_modal_solve_neumann_complex_object_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#src.demos.boundary.demo_versatile_error_scenarios_neumann_2d"><code class="docutils literal notranslate"><span class="pre">demo_versatile_error_scenarios_neumann_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#src.demos.boundary.demo_wall_neumann_tiled_mirrored_2d"><code class="docutils literal notranslate"><span class="pre">demo_wall_neumann_tiled_mirrored_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#src.demos.boundary.run_targeted_experiment"><code class="docutils literal notranslate"><span class="pre">run_targeted_experiment()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="src.demos.html#module-src.demos.convergence">src.demos.convergence module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#convergence-notes">Technicals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#src.demos.convergence.compare_jacobi_poisson_no_bc_2d"><code class="docutils literal notranslate"><span class="pre">compare_jacobi_poisson_no_bc_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#src.demos.convergence.demo_3methods_comparison_no_bc_2d"><code class="docutils literal notranslate"><span class="pre">demo_3methods_comparison_no_bc_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#src.demos.convergence.demo_3methods_comparison_with_wall_neumann_bc_2d"><code class="docutils literal notranslate"><span class="pre">demo_3methods_comparison_with_wall_neumann_bc_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#src.demos.convergence.demo_adaptive_truncation_analysis_2d"><code class="docutils literal notranslate"><span class="pre">demo_adaptive_truncation_analysis_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#src.demos.convergence.demo_residual_comparison_jacobi_poisson_filters_infinite_domain"><code class="docutils literal notranslate"><span class="pre">demo_residual_comparison_jacobi_poisson_filters_infinite_domain()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#src.demos.convergence.plot_adaptive_truncation_info"><code class="docutils literal notranslate"><span class="pre">plot_adaptive_truncation_info()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="src.demos.html#module-src.demos.reductions2d">src.demos.reductions2d module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#src.demos.reductions2d.demo_compare_standard_and_unified_kernels_unreduced_2d"><code class="docutils literal notranslate"><span class="pre">demo_compare_standard_and_unified_kernels_unreduced_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#src.demos.reductions2d.plot_and_csv_export_truncated_filters_and_modes_2d"><code class="docutils literal notranslate"><span class="pre">plot_and_csv_export_truncated_filters_and_modes_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#src.demos.reductions2d.plot_modes_filters_2d"><code class="docutils literal notranslate"><span class="pre">plot_modes_filters_2d()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="src.demos.html#module-src.demos.reductions3d">src.demos.reductions3d module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#src.demos.reductions3d.demo_plot_filters_adaptive_truncation_beautified_3d"><code class="docutils literal notranslate"><span class="pre">demo_plot_filters_adaptive_truncation_beautified_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#src.demos.reductions3d.plot_and_csv_export_truncated_filters_and_modes_3d"><code class="docutils literal notranslate"><span class="pre">plot_and_csv_export_truncated_filters_and_modes_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.demos.html#src.demos.reductions3d.quick_process_filters_3d"><code class="docutils literal notranslate"><span class="pre">quick_process_filters_3d()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="src.functions.html">src.functions package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="src.functions.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="src.functions.html#module-src.functions.analytics">src.functions.analytics module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.analytics.compare_jacobi_3methods_2d"><code class="docutils literal notranslate"><span class="pre">compare_jacobi_3methods_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.analytics.compare_jacobi_3methods_neumann_2d"><code class="docutils literal notranslate"><span class="pre">compare_jacobi_3methods_neumann_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.analytics.compare_jacobi_poisson_neumann_edge_mirrored_correction_2d"><code class="docutils literal notranslate"><span class="pre">compare_jacobi_poisson_neumann_edge_mirrored_correction_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.analytics.compute_adaptive_truncation_factors"><code class="docutils literal notranslate"><span class="pre">compute_adaptive_truncation_factors()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.analytics.generate_collision_mask"><code class="docutils literal notranslate"><span class="pre">generate_collision_mask()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.analytics.make_special_data_central_square"><code class="docutils literal notranslate"><span class="pre">make_special_data_central_square()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.analytics.prepare_padded_input_matrix"><code class="docutils literal notranslate"><span class="pre">prepare_padded_input_matrix()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.analytics.solve_poisson_2d"><code class="docutils literal notranslate"><span class="pre">solve_poisson_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.analytics.subtract_contour_from_solid"><code class="docutils literal notranslate"><span class="pre">subtract_contour_from_solid()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="src.functions.html#module-src.functions.decompositions">src.functions.decompositions module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#technicals">Technicals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.decompositions.absorb_cores_3d"><code class="docutils literal notranslate"><span class="pre">absorb_cores_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.decompositions.compute_low_rank_kernel_from_filters_2d"><code class="docutils literal notranslate"><span class="pre">compute_low_rank_kernel_from_filters_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.decompositions.compute_nth_kernel_mode_2d"><code class="docutils literal notranslate"><span class="pre">compute_nth_kernel_mode_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.decompositions.compute_nth_kernel_mode_3d"><code class="docutils literal notranslate"><span class="pre">compute_nth_kernel_mode_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.decompositions.compute_separable_filters_trunc_adaptive_2d"><code class="docutils literal notranslate"><span class="pre">compute_separable_filters_trunc_adaptive_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.decompositions.compute_separable_filters_trunc_percent_2d"><code class="docutils literal notranslate"><span class="pre">compute_separable_filters_trunc_percent_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.decompositions.compute_separable_filters_truncated_2d"><code class="docutils literal notranslate"><span class="pre">compute_separable_filters_truncated_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.decompositions.demo_test_svd_absorb"><code class="docutils literal notranslate"><span class="pre">demo_test_svd_absorb()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.decompositions.get_filters_from_svd_components_2d"><code class="docutils literal notranslate"><span class="pre">get_filters_from_svd_components_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.decompositions.get_max_rank_2d"><code class="docutils literal notranslate"><span class="pre">get_max_rank_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.decompositions.poisson_components_2d"><code class="docutils literal notranslate"><span class="pre">poisson_components_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.decompositions.poisson_compute_modes_trim_filters_3d"><code class="docutils literal notranslate"><span class="pre">poisson_compute_modes_trim_filters_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.decompositions.poisson_decomposition_components_3d"><code class="docutils literal notranslate"><span class="pre">poisson_decomposition_components_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.decompositions.poisson_filters_2d"><code class="docutils literal notranslate"><span class="pre">poisson_filters_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.decompositions.poisson_filters_3d"><code class="docutils literal notranslate"><span class="pre">poisson_filters_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.decompositions.poisson_svd_2d"><code class="docutils literal notranslate"><span class="pre">poisson_svd_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.decompositions.poisson_symcp_3d"><code class="docutils literal notranslate"><span class="pre">poisson_symcp_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.decompositions.poisson_tucker_3d"><code class="docutils literal notranslate"><span class="pre">poisson_tucker_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.decompositions.rank_safety_clamp_2d"><code class="docutils literal notranslate"><span class="pre">rank_safety_clamp_2d()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="src.functions.html#module-src.functions.generator">src.functions.generator module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#generator-method">Technicals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.generator.compute_alpha"><code class="docutils literal notranslate"><span class="pre">compute_alpha()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.generator.compute_beta"><code class="docutils literal notranslate"><span class="pre">compute_beta()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.generator.get_alpha_sign"><code class="docutils literal notranslate"><span class="pre">get_alpha_sign()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.generator.get_kernel_size"><code class="docutils literal notranslate"><span class="pre">get_kernel_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.generator.get_kernel_size_from_half_size"><code class="docutils literal notranslate"><span class="pre">get_kernel_size_from_half_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.generator.i_want_to_warm_start"><code class="docutils literal notranslate"><span class="pre">i_want_to_warm_start()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.generator.is_ok_to_zero_init"><code class="docutils literal notranslate"><span class="pre">is_ok_to_zero_init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.generator.poisson_kernel_2d"><code class="docutils literal notranslate"><span class="pre">poisson_kernel_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.generator.poisson_kernel_3d"><code class="docutils literal notranslate"><span class="pre">poisson_kernel_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.generator.poisson_kernel_standard_2d"><code class="docutils literal notranslate"><span class="pre">poisson_kernel_standard_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.generator.poisson_kernel_standard_2d_rec_memo"><code class="docutils literal notranslate"><span class="pre">poisson_kernel_standard_2d_rec_memo()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.generator.poisson_kernel_standard_3d"><code class="docutils literal notranslate"><span class="pre">poisson_kernel_standard_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.generator.poisson_kernel_standard_3d_rec_memo"><code class="docutils literal notranslate"><span class="pre">poisson_kernel_standard_3d_rec_memo()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.generator.poisson_kernel_unified_2d"><code class="docutils literal notranslate"><span class="pre">poisson_kernel_unified_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.generator.poisson_kernel_unified_2d_rec_memo"><code class="docutils literal notranslate"><span class="pre">poisson_kernel_unified_2d_rec_memo()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.generator.poisson_kernel_unified_3d"><code class="docutils literal notranslate"><span class="pre">poisson_kernel_unified_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.generator.poisson_kernel_unified_3d_rec_memo"><code class="docutils literal notranslate"><span class="pre">poisson_kernel_unified_3d_rec_memo()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="src.functions.html#module-src.functions.mathlib">src.functions.mathlib module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#mathlib-technicals">Technicals</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.functions.html#convolution-order-of-poisson-filters">Convolution Order of Poisson Filters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.apply_adaptive_truncation_1d"><code class="docutils literal notranslate"><span class="pre">apply_adaptive_truncation_1d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.apply_laplacian_2d"><code class="docutils literal notranslate"><span class="pre">apply_laplacian_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.apply_laplacian_3d"><code class="docutils literal notranslate"><span class="pre">apply_laplacian_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.bivariate_gaussian_normalized"><code class="docutils literal notranslate"><span class="pre">bivariate_gaussian_normalized()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.compute_abs_rel_error"><code class="docutils literal notranslate"><span class="pre">compute_abs_rel_error()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.compute_conv_padding"><code class="docutils literal notranslate"><span class="pre">compute_conv_padding()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.compute_gradient_2d"><code class="docutils literal notranslate"><span class="pre">compute_gradient_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.compute_l1_norm_error"><code class="docutils literal notranslate"><span class="pre">compute_l1_norm_error()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.compute_norm"><code class="docutils literal notranslate"><span class="pre">compute_norm()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.compute_residual_poisson_operator"><code class="docutils literal notranslate"><span class="pre">compute_residual_poisson_operator()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.compute_residual_poisson_tensor_operator"><code class="docutils literal notranslate"><span class="pre">compute_residual_poisson_tensor_operator()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.compute_residual_subdomain"><code class="docutils literal notranslate"><span class="pre">compute_residual_subdomain()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.compute_residual_subdomain_2d"><code class="docutils literal notranslate"><span class="pre">compute_residual_subdomain_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.compute_residual_subdomain_3d"><code class="docutils literal notranslate"><span class="pre">compute_residual_subdomain_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.compute_ssim"><code class="docutils literal notranslate"><span class="pre">compute_ssim()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.construct_laplacian_nd_vector_friendly"><code class="docutils literal notranslate"><span class="pre">construct_laplacian_nd_vector_friendly()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.convergence_rate"><code class="docutils literal notranslate"><span class="pre">convergence_rate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.convolve_filter_1d"><code class="docutils literal notranslate"><span class="pre">convolve_filter_1d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.convolve_filter_obj_aware_2d"><code class="docutils literal notranslate"><span class="pre">convolve_filter_obj_aware_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.convolve_filter_wall_aware_2d"><code class="docutils literal notranslate"><span class="pre">convolve_filter_wall_aware_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.convolve_filter_wall_aware_3d"><code class="docutils literal notranslate"><span class="pre">convolve_filter_wall_aware_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.convolve_kernel_2d"><code class="docutils literal notranslate"><span class="pre">convolve_kernel_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.convolve_kernel_single_pass_2d"><code class="docutils literal notranslate"><span class="pre">convolve_kernel_single_pass_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.expand_with_padding"><code class="docutils literal notranslate"><span class="pre">expand_with_padding()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.expand_with_padding_2d"><code class="docutils literal notranslate"><span class="pre">expand_with_padding_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.expand_with_padding_3d"><code class="docutils literal notranslate"><span class="pre">expand_with_padding_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.extract_frame_values"><code class="docutils literal notranslate"><span class="pre">extract_frame_values()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.extract_from_center_2d"><code class="docutils literal notranslate"><span class="pre">extract_from_center_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.extract_from_center_3d"><code class="docutils literal notranslate"><span class="pre">extract_from_center_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.find_max_rank_and_filter_size"><code class="docutils literal notranslate"><span class="pre">find_max_rank_and_filter_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.frobenius_norm"><code class="docutils literal notranslate"><span class="pre">frobenius_norm()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.generate_bivariate_gaussian"><code class="docutils literal notranslate"><span class="pre">generate_bivariate_gaussian()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.get_1d_array_half_size"><code class="docutils literal notranslate"><span class="pre">get_1d_array_half_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.get_effective_nonzero_1darray"><code class="docutils literal notranslate"><span class="pre">get_effective_nonzero_1darray()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.get_kernel_effective_size"><code class="docutils literal notranslate"><span class="pre">get_kernel_effective_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.get_kernel_trimmed_size"><code class="docutils literal notranslate"><span class="pre">get_kernel_trimmed_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.get_sub_domain_shape"><code class="docutils literal notranslate"><span class="pre">get_sub_domain_shape()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.get_truncate_indices"><code class="docutils literal notranslate"><span class="pre">get_truncate_indices()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.inf_norm"><code class="docutils literal notranslate"><span class="pre">inf_norm()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.interp_1darray"><code class="docutils literal notranslate"><span class="pre">interp_1darray()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.is_active_domain"><code class="docutils literal notranslate"><span class="pre">is_active_domain()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.is_contour_2d"><code class="docutils literal notranslate"><span class="pre">is_contour_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.is_solid_2d"><code class="docutils literal notranslate"><span class="pre">is_solid_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.is_wall_2d"><code class="docutils literal notranslate"><span class="pre">is_wall_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.is_wall_3d"><code class="docutils literal notranslate"><span class="pre">is_wall_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.make_4_tiles_mirrored_2d"><code class="docutils literal notranslate"><span class="pre">make_4_tiles_mirrored_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.make_4_tiles_mirrored_even_2d"><code class="docutils literal notranslate"><span class="pre">make_4_tiles_mirrored_even_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.make_4_tiles_mirrored_odd_2d"><code class="docutils literal notranslate"><span class="pre">make_4_tiles_mirrored_odd_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.make_9_tiles_mirrored_2d"><code class="docutils literal notranslate"><span class="pre">make_9_tiles_mirrored_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.mark_contour_2d"><code class="docutils literal notranslate"><span class="pre">mark_contour_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.mark_solid_2d"><code class="docutils literal notranslate"><span class="pre">mark_solid_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.mre"><code class="docutils literal notranslate"><span class="pre">mre()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.ms_norm"><code class="docutils literal notranslate"><span class="pre">ms_norm()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.mse"><code class="docutils literal notranslate"><span class="pre">mse()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.normalize_range"><code class="docutils literal notranslate"><span class="pre">normalize_range()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.outer_product_2d"><code class="docutils literal notranslate"><span class="pre">outer_product_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.post_process_obj_boundary_enforcement_2d"><code class="docutils literal notranslate"><span class="pre">post_process_obj_boundary_enforcement_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.post_process_wall_boundary_enforcement_2d"><code class="docutils literal notranslate"><span class="pre">post_process_wall_boundary_enforcement_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.post_process_wall_boundary_enforcement_3d"><code class="docutils literal notranslate"><span class="pre">post_process_wall_boundary_enforcement_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.set_frame_boundary_from_matrix"><code class="docutils literal notranslate"><span class="pre">set_frame_boundary_from_matrix()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.set_frame_fixed_value"><code class="docutils literal notranslate"><span class="pre">set_frame_fixed_value()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.set_obj_bound_2d"><code class="docutils literal notranslate"><span class="pre">set_obj_bound_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.set_obj_bound_neumann_edge_2d"><code class="docutils literal notranslate"><span class="pre">set_obj_bound_neumann_edge_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.set_padding_2d"><code class="docutils literal notranslate"><span class="pre">set_padding_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.set_padding_3d"><code class="docutils literal notranslate"><span class="pre">set_padding_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.set_single_cell_wall_bound_2d"><code class="docutils literal notranslate"><span class="pre">set_single_cell_wall_bound_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.set_single_cell_wall_bound_3d"><code class="docutils literal notranslate"><span class="pre">set_single_cell_wall_bound_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.set_single_cell_wall_neumann_edge_2d"><code class="docutils literal notranslate"><span class="pre">set_single_cell_wall_neumann_edge_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.set_single_cell_wall_neumann_edge_3d"><code class="docutils literal notranslate"><span class="pre">set_single_cell_wall_neumann_edge_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.set_submatrix_zero_2d"><code class="docutils literal notranslate"><span class="pre">set_submatrix_zero_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.set_submatrix_zero_3d"><code class="docutils literal notranslate"><span class="pre">set_submatrix_zero_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.set_wall_bound_2d"><code class="docutils literal notranslate"><span class="pre">set_wall_bound_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.set_wall_bound_3d"><code class="docutils literal notranslate"><span class="pre">set_wall_bound_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.set_wall_bound_neumann_center_2d"><code class="docutils literal notranslate"><span class="pre">set_wall_bound_neumann_center_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.set_wall_bound_neumann_edge_2d"><code class="docutils literal notranslate"><span class="pre">set_wall_bound_neumann_edge_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.set_wall_bound_neumann_edge_3d"><code class="docutils literal notranslate"><span class="pre">set_wall_bound_neumann_edge_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.solve_jacobi_matrix_form_no_boundary_2d"><code class="docutils literal notranslate"><span class="pre">solve_jacobi_matrix_form_no_boundary_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.solve_jacobi_single_padding_obj_collision_2d"><code class="docutils literal notranslate"><span class="pre">solve_jacobi_single_padding_obj_collision_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.solve_jacobi_single_padding_only_wall_2d"><code class="docutils literal notranslate"><span class="pre">solve_jacobi_single_padding_only_wall_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.solve_jacobi_single_padding_only_wall_3d"><code class="docutils literal notranslate"><span class="pre">solve_jacobi_single_padding_only_wall_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.solve_jacobi_vector_form"><code class="docutils literal notranslate"><span class="pre">solve_jacobi_vector_form()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.solve_poisson_full_kernel_2d"><code class="docutils literal notranslate"><span class="pre">solve_poisson_full_kernel_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.solve_poisson_separable_filters_2d"><code class="docutils literal notranslate"><span class="pre">solve_poisson_separable_filters_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.solve_poisson_separable_filters_from_components_2d"><code class="docutils literal notranslate"><span class="pre">solve_poisson_separable_filters_from_components_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.solve_poisson_separable_filters_obj_aware_2d"><code class="docutils literal notranslate"><span class="pre">solve_poisson_separable_filters_obj_aware_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.solve_poisson_separable_filters_wall_aware_2d"><code class="docutils literal notranslate"><span class="pre">solve_poisson_separable_filters_wall_aware_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.solve_poisson_separable_filters_wall_aware_3d"><code class="docutils literal notranslate"><span class="pre">solve_poisson_separable_filters_wall_aware_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.trim"><code class="docutils literal notranslate"><span class="pre">trim()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.truncate_filters"><code class="docutils literal notranslate"><span class="pre">truncate_filters()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.truncate_fixed_threshold_1darray"><code class="docutils literal notranslate"><span class="pre">truncate_fixed_threshold_1darray()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.truncate_percent_filter_1d"><code class="docutils literal notranslate"><span class="pre">truncate_percent_filter_1d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.functions.html#src.functions.mathlib.zero_out_small_values"><code class="docutils literal notranslate"><span class="pre">zero_out_small_values()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="src.helper.html">src.helper package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="src.helper.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="src.helper.html#module-src.helper.commons">src.helper.commons module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.BoundaryType"><code class="docutils literal notranslate"><span class="pre">BoundaryType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.BoundaryType.CONST_FRAME"><code class="docutils literal notranslate"><span class="pre">BoundaryType.CONST_FRAME</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.BoundaryType.DIRICHLET"><code class="docutils literal notranslate"><span class="pre">BoundaryType.DIRICHLET</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.BoundaryType.NEUMANN_CENTER"><code class="docutils literal notranslate"><span class="pre">BoundaryType.NEUMANN_CENTER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.BoundaryType.NEUMANN_EDGE"><code class="docutils literal notranslate"><span class="pre">BoundaryType.NEUMANN_EDGE</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.ColorMapModesVectorField"><code class="docutils literal notranslate"><span class="pre">ColorMapModesVectorField</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.ColorMapModesVectorField.VECTOR_ANGLE"><code class="docutils literal notranslate"><span class="pre">ColorMapModesVectorField.VECTOR_ANGLE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.ColorMapModesVectorField.VECTOR_LENGTH"><code class="docutils literal notranslate"><span class="pre">ColorMapModesVectorField.VECTOR_LENGTH</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.ConvolutionOrientation"><code class="docutils literal notranslate"><span class="pre">ConvolutionOrientation</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.ConvolutionOrientation.CENTER"><code class="docutils literal notranslate"><span class="pre">ConvolutionOrientation.CENTER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.ConvolutionOrientation.FIBER"><code class="docutils literal notranslate"><span class="pre">ConvolutionOrientation.FIBER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.ConvolutionOrientation.HORIZONTAL"><code class="docutils literal notranslate"><span class="pre">ConvolutionOrientation.HORIZONTAL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.ConvolutionOrientation.UNKNOWN"><code class="docutils literal notranslate"><span class="pre">ConvolutionOrientation.UNKNOWN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.ConvolutionOrientation.VERTICAL"><code class="docutils literal notranslate"><span class="pre">ConvolutionOrientation.VERTICAL</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.DataFileFormat"><code class="docutils literal notranslate"><span class="pre">DataFileFormat</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.DataFileFormat.UNKNOWN"><code class="docutils literal notranslate"><span class="pre">DataFileFormat.UNKNOWN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.DataFileFormat.cpp"><code class="docutils literal notranslate"><span class="pre">DataFileFormat.cpp</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.DataFileFormat.hlsli"><code class="docutils literal notranslate"><span class="pre">DataFileFormat.hlsli</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.DataFileFormat.npy"><code class="docutils literal notranslate"><span class="pre">DataFileFormat.npy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.DataFileFormat.npz"><code class="docutils literal notranslate"><span class="pre">DataFileFormat.npz</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.DataFileFormat.txt"><code class="docutils literal notranslate"><span class="pre">DataFileFormat.txt</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.DataMatrixMode"><code class="docutils literal notranslate"><span class="pre">DataMatrixMode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.DataMatrixMode.CONST_VALUE"><code class="docutils literal notranslate"><span class="pre">DataMatrixMode.CONST_VALUE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.DataMatrixMode.LINEAR_RANGE_4BLOCK_SYMMETRIC_MIRRORED"><code class="docutils literal notranslate"><span class="pre">DataMatrixMode.LINEAR_RANGE_4BLOCK_SYMMETRIC_MIRRORED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.DataMatrixMode.LINEAR_RANGE_FULL"><code class="docutils literal notranslate"><span class="pre">DataMatrixMode.LINEAR_RANGE_FULL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.DataMatrixMode.RANDOMIZE_FLOAT_GAUSSIAN"><code class="docutils literal notranslate"><span class="pre">DataMatrixMode.RANDOMIZE_FLOAT_GAUSSIAN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.DataMatrixMode.RANDOMIZE_FLOAT_UNIFORM"><code class="docutils literal notranslate"><span class="pre">DataMatrixMode.RANDOMIZE_FLOAT_UNIFORM</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.DataMatrixMode.RANDOMIZE_INT"><code class="docutils literal notranslate"><span class="pre">DataMatrixMode.RANDOMIZE_INT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.DataMatrixMode.SPECIAL_PATTERN"><code class="docutils literal notranslate"><span class="pre">DataMatrixMode.SPECIAL_PATTERN</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.DataMatrixPattern"><code class="docutils literal notranslate"><span class="pre">DataMatrixPattern</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.DataMatrixPattern.CENTRAL_SQUARE"><code class="docutils literal notranslate"><span class="pre">DataMatrixPattern.CENTRAL_SQUARE</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.DataMatrixPatternParams"><code class="docutils literal notranslate"><span class="pre">DataMatrixPatternParams</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.DataMatrixPatternParams.radius"><code class="docutils literal notranslate"><span class="pre">DataMatrixPatternParams.radius</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.DecompMethod"><code class="docutils literal notranslate"><span class="pre">DecompMethod</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.DecompMethod.NONE"><code class="docutils literal notranslate"><span class="pre">DecompMethod.NONE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.DecompMethod.SVD_2D"><code class="docutils literal notranslate"><span class="pre">DecompMethod.SVD_2D</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.DecompMethod.SYM_CP_3D"><code class="docutils literal notranslate"><span class="pre">DecompMethod.SYM_CP_3D</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.DecompMethod.TUCKER_3D"><code class="docutils literal notranslate"><span class="pre">DecompMethod.TUCKER_3D</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.DecompMethod.UNKNOWN"><code class="docutils literal notranslate"><span class="pre">DecompMethod.UNKNOWN</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.ExportFormat"><code class="docutils literal notranslate"><span class="pre">ExportFormat</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.ExportFormat.GROUP_RANK_FLOAT4_HLSL"><code class="docutils literal notranslate"><span class="pre">ExportFormat.GROUP_RANK_FLOAT4_HLSL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.ExportFormat.GROUP_RANK_SEQUENTIAL"><code class="docutils literal notranslate"><span class="pre">ExportFormat.GROUP_RANK_SEQUENTIAL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.ExportFormat.SEPARATE_RANK_FILTERS"><code class="docutils literal notranslate"><span class="pre">ExportFormat.SEPARATE_RANK_FILTERS</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.NormOptions"><code class="docutils literal notranslate"><span class="pre">NormOptions</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.NormOptions.FROBENIUS"><code class="docutils literal notranslate"><span class="pre">NormOptions.FROBENIUS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.NormOptions.INF"><code class="docutils literal notranslate"><span class="pre">NormOptions.INF</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.NormOptions.MSE"><code class="docutils literal notranslate"><span class="pre">NormOptions.MSE</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsBoundary"><code class="docutils literal notranslate"><span class="pre">OptionsBoundary</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsBoundary.back_wall"><code class="docutils literal notranslate"><span class="pre">OptionsBoundary.back_wall</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsBoundary.condition"><code class="docutils literal notranslate"><span class="pre">OptionsBoundary.condition</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsBoundary.down_wall"><code class="docutils literal notranslate"><span class="pre">OptionsBoundary.down_wall</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsBoundary.dynamic_padding"><code class="docutils literal notranslate"><span class="pre">OptionsBoundary.dynamic_padding</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsBoundary.enforce"><code class="docutils literal notranslate"><span class="pre">OptionsBoundary.enforce</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsBoundary.front_wall"><code class="docutils literal notranslate"><span class="pre">OptionsBoundary.front_wall</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsBoundary.left_wall"><code class="docutils literal notranslate"><span class="pre">OptionsBoundary.left_wall</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsBoundary.obj_collide"><code class="docutils literal notranslate"><span class="pre">OptionsBoundary.obj_collide</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsBoundary.padding_size"><code class="docutils literal notranslate"><span class="pre">OptionsBoundary.padding_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsBoundary.post_solve_enforcement"><code class="docutils literal notranslate"><span class="pre">OptionsBoundary.post_solve_enforcement</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsBoundary.right_wall"><code class="docutils literal notranslate"><span class="pre">OptionsBoundary.right_wall</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsBoundary.up_wall"><code class="docutils literal notranslate"><span class="pre">OptionsBoundary.up_wall</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsBoundary.val"><code class="docutils literal notranslate"><span class="pre">OptionsBoundary.val</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsDataMatrix"><code class="docutils literal notranslate"><span class="pre">OptionsDataMatrix</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsDataMatrix.const_input"><code class="docutils literal notranslate"><span class="pre">OptionsDataMatrix.const_input</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsDataMatrix.force_symmetric_unit_range"><code class="docutils literal notranslate"><span class="pre">OptionsDataMatrix.force_symmetric_unit_range</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsDataMatrix.mode"><code class="docutils literal notranslate"><span class="pre">OptionsDataMatrix.mode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsDataMatrix.pattern_params"><code class="docutils literal notranslate"><span class="pre">OptionsDataMatrix.pattern_params</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsDataMatrix.rand_range"><code class="docutils literal notranslate"><span class="pre">OptionsDataMatrix.rand_range</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsDataMatrix.rand_seed"><code class="docutils literal notranslate"><span class="pre">OptionsDataMatrix.rand_seed</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsDataMatrix.shape"><code class="docutils literal notranslate"><span class="pre">OptionsDataMatrix.shape</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsDataMatrix.special_pattern"><code class="docutils literal notranslate"><span class="pre">OptionsDataMatrix.special_pattern</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsGeneral"><code class="docutils literal notranslate"><span class="pre">OptionsGeneral</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsGeneral.boundary"><code class="docutils literal notranslate"><span class="pre">OptionsGeneral.boundary</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsGeneral.input"><code class="docutils literal notranslate"><span class="pre">OptionsGeneral.input</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsGeneral.kernel"><code class="docutils literal notranslate"><span class="pre">OptionsGeneral.kernel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsGeneral.reduction"><code class="docutils literal notranslate"><span class="pre">OptionsGeneral.reduction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsGeneral.solver"><code class="docutils literal notranslate"><span class="pre">OptionsGeneral.solver</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsKernel"><code class="docutils literal notranslate"><span class="pre">OptionsKernel</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsKernel.alpha"><code class="docutils literal notranslate"><span class="pre">OptionsKernel.alpha</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsKernel.beta"><code class="docutils literal notranslate"><span class="pre">OptionsKernel.beta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsKernel.clear_memo"><code class="docutils literal notranslate"><span class="pre">OptionsKernel.clear_memo</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsKernel.dt"><code class="docutils literal notranslate"><span class="pre">OptionsKernel.dt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsKernel.dx"><code class="docutils literal notranslate"><span class="pre">OptionsKernel.dx</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsKernel.itr"><code class="docutils literal notranslate"><span class="pre">OptionsKernel.itr</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsKernel.kappa"><code class="docutils literal notranslate"><span class="pre">OptionsKernel.kappa</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsKernel.kernel_type"><code class="docutils literal notranslate"><span class="pre">OptionsKernel.kernel_type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots"><code class="docutils literal notranslate"><span class="pre">OptionsPlots</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.alpha"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.alpha</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.aspect_ratio"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.aspect_ratio</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.axis_background_color"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.axis_background_color</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.beautify"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.beautify</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.blend_cmaps"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.blend_cmaps</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.canvas_background_color"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.canvas_background_color</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.cbar"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.cbar</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.cbar_add_percentile"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.cbar_add_percentile</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.cbar_border"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.cbar_border</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.cbar_label"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.cbar_label</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.cbar_label_color"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.cbar_label_color</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.cbar_location"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.cbar_location</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.cbar_only_min_max"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.cbar_only_min_max</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.cbar_orientation"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.cbar_orientation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.cbar_outline_color"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.cbar_outline_color</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.cbar_scientific"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.cbar_scientific</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.cbar_shrink"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.cbar_shrink</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.cbar_special"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.cbar_special</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.cbar_tick_color"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.cbar_tick_color</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.cbar_ticks"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.cbar_ticks</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.cmap"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.cmap</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.cmap_secondary_blend"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.cmap_secondary_blend</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.contour_cbar"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.contour_cbar</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.contour_cbar_border"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.contour_cbar_border</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.contour_cbar_location"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.contour_cbar_location</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.contour_cbar_no_ticks"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.contour_cbar_no_ticks</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.contour_cbar_orientation"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.contour_cbar_orientation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.contour_cmap"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.contour_cmap</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.contour_res"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.contour_res</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.contour_show_values"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.contour_show_values</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.fmt"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.fmt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.frame_on"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.frame_on</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.highlight_edgecolor"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.highlight_edgecolor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.highlight_facecolor"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.highlight_facecolor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.highlight_fill"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.highlight_fill</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.highlight_line_width"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.highlight_line_width</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.interp_1d"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.interp_1d</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.interp_1d_res"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.interp_1d_res</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.interp_2d_mode"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.interp_2d_mode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.interp_3d"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.interp_3d</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.interpolate"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.interpolate</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.limits_x_tight"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.limits_x_tight</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.limits_y_tight"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.limits_y_tight</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.line_widths"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.line_widths</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.no_ticks"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.no_ticks</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.plt_show"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.plt_show</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.projection"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.projection</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.show_contour"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.show_contour</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots.show_values"><code class="docutils literal notranslate"><span class="pre">OptionsPlots.show_values</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPoissonSolver"><code class="docutils literal notranslate"><span class="pre">OptionsPoissonSolver</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPoissonSolver.dim"><code class="docutils literal notranslate"><span class="pre">OptionsPoissonSolver.dim</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPoissonSolver.solver_type"><code class="docutils literal notranslate"><span class="pre">OptionsPoissonSolver.solver_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPoissonSolver.zero_init"><code class="docutils literal notranslate"><span class="pre">OptionsPoissonSolver.zero_init</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsReduction"><code class="docutils literal notranslate"><span class="pre">OptionsReduction</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsReduction.decomp_method"><code class="docutils literal notranslate"><span class="pre">OptionsReduction.decomp_method</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsReduction.output_format"><code class="docutils literal notranslate"><span class="pre">OptionsReduction.output_format</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsReduction.preserve_shape"><code class="docutils literal notranslate"><span class="pre">OptionsReduction.preserve_shape</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsReduction.rank"><code class="docutils literal notranslate"><span class="pre">OptionsReduction.rank</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsReduction.reduce"><code class="docutils literal notranslate"><span class="pre">OptionsReduction.reduce</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsReduction.truncation_method"><code class="docutils literal notranslate"><span class="pre">OptionsReduction.truncation_method</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsReduction.truncation_value"><code class="docutils literal notranslate"><span class="pre">OptionsReduction.truncation_value</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsReduction.use_separable_filters"><code class="docutils literal notranslate"><span class="pre">OptionsReduction.use_separable_filters</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsSubPlots"><code class="docutils literal notranslate"><span class="pre">OptionsSubPlots</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsSubPlots.cbar_percentiles"><code class="docutils literal notranslate"><span class="pre">OptionsSubPlots.cbar_percentiles</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsSubPlots.cmaps"><code class="docutils literal notranslate"><span class="pre">OptionsSubPlots.cmaps</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsSubPlots.highlights"><code class="docutils literal notranslate"><span class="pre">OptionsSubPlots.highlights</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsSubPlots.layout"><code class="docutils literal notranslate"><span class="pre">OptionsSubPlots.layout</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OptionsSubPlots.titles"><code class="docutils literal notranslate"><span class="pre">OptionsSubPlots.titles</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.OutputFormat"><code class="docutils literal notranslate"><span class="pre">OutputFormat</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OutputFormat.ABSORBED_FILTERS"><code class="docutils literal notranslate"><span class="pre">OutputFormat.ABSORBED_FILTERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OutputFormat.ALL_COMPONENTS"><code class="docutils literal notranslate"><span class="pre">OutputFormat.ALL_COMPONENTS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.OutputFormat.UNKNOWN"><code class="docutils literal notranslate"><span class="pre">OutputFormat.UNKNOWN</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.PoissonKernelType"><code class="docutils literal notranslate"><span class="pre">PoissonKernelType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.PoissonKernelType.STANDARD"><code class="docutils literal notranslate"><span class="pre">PoissonKernelType.STANDARD</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.PoissonKernelType.UNIFIED"><code class="docutils literal notranslate"><span class="pre">PoissonKernelType.UNIFIED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.PoissonKernelType.UNKNOWN"><code class="docutils literal notranslate"><span class="pre">PoissonKernelType.UNKNOWN</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.PoissonSolverType"><code class="docutils literal notranslate"><span class="pre">PoissonSolverType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.PoissonSolverType.FORWARD"><code class="docutils literal notranslate"><span class="pre">PoissonSolverType.FORWARD</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.PoissonSolverType.INVERSE"><code class="docutils literal notranslate"><span class="pre">PoissonSolverType.INVERSE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.PoissonSolverType.UNKNOWN"><code class="docutils literal notranslate"><span class="pre">PoissonSolverType.UNKNOWN</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.SolverDimension"><code class="docutils literal notranslate"><span class="pre">SolverDimension</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.SolverDimension.D2"><code class="docutils literal notranslate"><span class="pre">SolverDimension.D2</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.SolverDimension.D3"><code class="docutils literal notranslate"><span class="pre">SolverDimension.D3</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.SolverDimension.UNKNOWN"><code class="docutils literal notranslate"><span class="pre">SolverDimension.UNKNOWN</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.TruncationMode"><code class="docutils literal notranslate"><span class="pre">TruncationMode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.TruncationMode.FIXED_THRESHOLD"><code class="docutils literal notranslate"><span class="pre">TruncationMode.FIXED_THRESHOLD</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.TruncationMode.PERCENTAGE"><code class="docutils literal notranslate"><span class="pre">TruncationMode.PERCENTAGE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.TruncationMode.UNKNOWN"><code class="docutils literal notranslate"><span class="pre">TruncationMode.UNKNOWN</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector2DInt"><code class="docutils literal notranslate"><span class="pre">Vector2DInt</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector2DInt.add"><code class="docutils literal notranslate"><span class="pre">Vector2DInt.add()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector2DInt.mul"><code class="docutils literal notranslate"><span class="pre">Vector2DInt.mul()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector2DInt.set"><code class="docutils literal notranslate"><span class="pre">Vector2DInt.set()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector2DInt.set_from"><code class="docutils literal notranslate"><span class="pre">Vector2DInt.set_from()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector2DInt.set_v1"><code class="docutils literal notranslate"><span class="pre">Vector2DInt.set_v1()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector2DInt.set_v2"><code class="docutils literal notranslate"><span class="pre">Vector2DInt.set_v2()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector2DInt.v1"><code class="docutils literal notranslate"><span class="pre">Vector2DInt.v1()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector2DInt.v2"><code class="docutils literal notranslate"><span class="pre">Vector2DInt.v2()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector2DInt.value"><code class="docutils literal notranslate"><span class="pre">Vector2DInt.value()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector2DIntData"><code class="docutils literal notranslate"><span class="pre">Vector2DIntData</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector2DIntData.v1"><code class="docutils literal notranslate"><span class="pre">Vector2DIntData.v1</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector2DIntData.v2"><code class="docutils literal notranslate"><span class="pre">Vector2DIntData.v2</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector3DInt"><code class="docutils literal notranslate"><span class="pre">Vector3DInt</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector3DInt.add"><code class="docutils literal notranslate"><span class="pre">Vector3DInt.add()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector3DInt.mul"><code class="docutils literal notranslate"><span class="pre">Vector3DInt.mul()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector3DInt.set"><code class="docutils literal notranslate"><span class="pre">Vector3DInt.set()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector3DInt.set_from"><code class="docutils literal notranslate"><span class="pre">Vector3DInt.set_from()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector3DInt.set_v1"><code class="docutils literal notranslate"><span class="pre">Vector3DInt.set_v1()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector3DInt.set_v2"><code class="docutils literal notranslate"><span class="pre">Vector3DInt.set_v2()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector3DInt.set_v3"><code class="docutils literal notranslate"><span class="pre">Vector3DInt.set_v3()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector3DInt.v1"><code class="docutils literal notranslate"><span class="pre">Vector3DInt.v1()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector3DInt.v2"><code class="docutils literal notranslate"><span class="pre">Vector3DInt.v2()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector3DInt.v3"><code class="docutils literal notranslate"><span class="pre">Vector3DInt.v3()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector3DInt.value"><code class="docutils literal notranslate"><span class="pre">Vector3DInt.value()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector3DIntData"><code class="docutils literal notranslate"><span class="pre">Vector3DIntData</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector3DIntData.v1"><code class="docutils literal notranslate"><span class="pre">Vector3DIntData.v1</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector3DIntData.v2"><code class="docutils literal notranslate"><span class="pre">Vector3DIntData.v2</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.helper.html#src.helper.commons.Vector3DIntData.v3"><code class="docutils literal notranslate"><span class="pre">Vector3DIntData.v3</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.generic_options"><code class="docutils literal notranslate"><span class="pre">generic_options()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.get_default_padding"><code class="docutils literal notranslate"><span class="pre">get_default_padding()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.is_solver_2d"><code class="docutils literal notranslate"><span class="pre">is_solver_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.is_solver_3d"><code class="docutils literal notranslate"><span class="pre">is_solver_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.commons.to_string_norm"><code class="docutils literal notranslate"><span class="pre">to_string_norm()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="src.helper.html#module-src.helper.iohandler">src.helper.iohandler module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#technicals">Technicals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.batch_generate_filters"><code class="docutils literal notranslate"><span class="pre">batch_generate_filters()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.convert_database_to_str"><code class="docutils literal notranslate"><span class="pre">convert_database_to_str()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.demo_export_single_order_filters_2d"><code class="docutils literal notranslate"><span class="pre">demo_export_single_order_filters_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.demo_export_single_order_filters_3d"><code class="docutils literal notranslate"><span class="pre">demo_export_single_order_filters_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.demo_generate_and_export_filters_database_2d"><code class="docutils literal notranslate"><span class="pre">demo_generate_and_export_filters_database_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.demo_generate_and_export_filters_database_3d"><code class="docutils literal notranslate"><span class="pre">demo_generate_and_export_filters_database_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.demo_generate_and_export_single_order_filters_2d"><code class="docutils literal notranslate"><span class="pre">demo_generate_and_export_single_order_filters_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.demo_generate_and_export_single_order_filters_3d"><code class="docutils literal notranslate"><span class="pre">demo_generate_and_export_single_order_filters_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.demo_print_filters_2d"><code class="docutils literal notranslate"><span class="pre">demo_print_filters_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.demo_print_filters_3d"><code class="docutils literal notranslate"><span class="pre">demo_print_filters_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.export_components_csv"><code class="docutils literal notranslate"><span class="pre">export_components_csv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.export_filters"><code class="docutils literal notranslate"><span class="pre">export_filters()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.format_scientific"><code class="docutils literal notranslate"><span class="pre">format_scientific()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.generate_dump_path_filter_database"><code class="docutils literal notranslate"><span class="pre">generate_dump_path_filter_database()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.generate_or_load_filters"><code class="docutils literal notranslate"><span class="pre">generate_or_load_filters()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.generate_specs_info"><code class="docutils literal notranslate"><span class="pre">generate_specs_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.load_filter_database"><code class="docutils literal notranslate"><span class="pre">load_filter_database()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.make_options_batch_filter_generation"><code class="docutils literal notranslate"><span class="pre">make_options_batch_filter_generation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.print_components_3d"><code class="docutils literal notranslate"><span class="pre">print_components_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.print_cpp_friendly"><code class="docutils literal notranslate"><span class="pre">print_cpp_friendly()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.print_filters"><code class="docutils literal notranslate"><span class="pre">print_filters()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.print_float4_group_array_hlsl_friendly"><code class="docutils literal notranslate"><span class="pre">print_float4_group_array_hlsl_friendly()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.print_poisson_components_3d"><code class="docutils literal notranslate"><span class="pre">print_poisson_components_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.print_poisson_filters"><code class="docutils literal notranslate"><span class="pre">print_poisson_filters()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.save_filter_database"><code class="docutils literal notranslate"><span class="pre">save_filter_database()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.iohandler.str_float4_hlsl_friendly"><code class="docutils literal notranslate"><span class="pre">str_float4_hlsl_friendly()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="src.helper.html#module-src.helper.visualizer">src.helper.visualizer module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.FFormatter"><code class="docutils literal notranslate"><span class="pre">FFormatter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.add_collision_masks"><code class="docutils literal notranslate"><span class="pre">add_collision_masks()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.add_grid_subplots_gridspec"><code class="docutils literal notranslate"><span class="pre">add_grid_subplots_gridspec()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.add_grid_subplots_mosaic"><code class="docutils literal notranslate"><span class="pre">add_grid_subplots_mosaic()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.add_object_mask"><code class="docutils literal notranslate"><span class="pre">add_object_mask()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.add_subplot"><code class="docutils literal notranslate"><span class="pre">add_subplot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.add_text"><code class="docutils literal notranslate"><span class="pre">add_text()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.adjust_axis_projection"><code class="docutils literal notranslate"><span class="pre">adjust_axis_projection()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.beautify_axis"><code class="docutils literal notranslate"><span class="pre">beautify_axis()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.clear_axis"><code class="docutils literal notranslate"><span class="pre">clear_axis()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.compute_layout"><code class="docutils literal notranslate"><span class="pre">compute_layout()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.correct_color_bar_2d"><code class="docutils literal notranslate"><span class="pre">correct_color_bar_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.draw_line"><code class="docutils literal notranslate"><span class="pre">draw_line()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.draw_truncation_visuals"><code class="docutils literal notranslate"><span class="pre">draw_truncation_visuals()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.fmt_imshow"><code class="docutils literal notranslate"><span class="pre">fmt_imshow()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.grid_layout_example_1"><code class="docutils literal notranslate"><span class="pre">grid_layout_example_1()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.grid_layout_example_2"><code class="docutils literal notranslate"><span class="pre">grid_layout_example_2()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.highlght_cells"><code class="docutils literal notranslate"><span class="pre">highlght_cells()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.init_subplots"><code class="docutils literal notranslate"><span class="pre">init_subplots()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.initialize_grid_layout_gridspec"><code class="docutils literal notranslate"><span class="pre">initialize_grid_layout_gridspec()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.make_grid_layout_gridspec"><code class="docutils literal notranslate"><span class="pre">make_grid_layout_gridspec()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.make_grid_layout_mosaic"><code class="docutils literal notranslate"><span class="pre">make_grid_layout_mosaic()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.plot_1d_array"><code class="docutils literal notranslate"><span class="pre">plot_1d_array()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.plot_1d_array_grid"><code class="docutils literal notranslate"><span class="pre">plot_1d_array_grid()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.plot_filters"><code class="docutils literal notranslate"><span class="pre">plot_filters()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.plot_filters_3d_advanced"><code class="docutils literal notranslate"><span class="pre">plot_filters_3d_advanced()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.plot_matrix_2d_advanced"><code class="docutils literal notranslate"><span class="pre">plot_matrix_2d_advanced()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.plot_matrix_2d_simple"><code class="docutils literal notranslate"><span class="pre">plot_matrix_2d_simple()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.plot_matrix_3d"><code class="docutils literal notranslate"><span class="pre">plot_matrix_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.plot_matrix_grid"><code class="docutils literal notranslate"><span class="pre">plot_matrix_grid()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.plot_scalar_field"><code class="docutils literal notranslate"><span class="pre">plot_scalar_field()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.plot_scalar_field_unpack_opts"><code class="docutils literal notranslate"><span class="pre">plot_scalar_field_unpack_opts()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.plot_vector_field_2d"><code class="docutils literal notranslate"><span class="pre">plot_vector_field_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.simple_animation_examples"><code class="docutils literal notranslate"><span class="pre">simple_animation_examples()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.super_impose_mask"><code class="docutils literal notranslate"><span class="pre">super_impose_mask()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.helper.html#src.helper.visualizer.use_style"><code class="docutils literal notranslate"><span class="pre">use_style()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="notes.html" class="btn btn-neutral float-left" title="Notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="src.demos.html" class="btn btn-neutral float-right" title="src.demos package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ubisoft.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

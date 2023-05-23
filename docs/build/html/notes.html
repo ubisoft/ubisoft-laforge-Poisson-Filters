@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notes &mdash; Compact Poisson Filters 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Documentation" href="code_doc.html" />
+    <link rel="prev" title="Getting Started" href="quickstart.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Compact Poisson Filters
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Usage</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#technical">Technical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#general">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#potential-applications-and-future-work">Potential Applications and Future Work</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#suggested-reads-codes">Suggested Reads/Codes</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code_doc.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_index.html">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Compact Poisson Filters</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Notes</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/notes.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="notes">
+<span id="notes-page"></span><h1>Notes<a class="headerlink" href="#notes" title="Permalink to this heading"></a></h1>
+<p>Read these notes to help understand the method and how it is best implemented.</p>
+<section id="technical">
+<h2>Technical<a class="headerlink" href="#technical" title="Permalink to this heading"></a></h2>
+<p>See the modules technical notes for:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="src.demos.html#quick-access-demos-header"><span class="std std-ref">Quick Access To All Demos</span></a> : domain data requirements, sign flip when using the
+<cite>unified</cite> Poisson kernel, and the choice of rank for 2D and 3D.</p></li>
+<li><p><a class="reference internal" href="src.functions.html#generator-method"><span class="std std-ref">Generator</span></a>: <em>unified</em> vs <em>standard</em> kernel types, application notes on choosing
+<span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> when generating kernels, and warm starting.</p></li>
+<li><p><a class="reference internal" href="src.functions.html#decomposition-method"><span class="std std-ref">Decomposition</span></a>: 2D (<em>SVD</em>) vs 3D (<em>Symmetric CP</em>) decompositions, absorbing eigenvalues,
+the meaning and usage of rank for tensors in 3D, and what a <em>safe rank</em> means.</p></li>
+<li><p><a class="reference internal" href="src.functions.html#mathlib-technicals"><span class="std std-ref">Mathlib</span></a>: <em>inverse</em> vs <em>forward</em> Poisson equations, <em>matrix-form</em> vs <em>vector-form</em> linear
+solvers, Poisson filter computation and convolution.</p></li>
+<li><p><a class="reference internal" href="src.demos.html#convergence-notes"><span class="std std-ref">Convergence</span></a>: how adaptive truncation works.</p></li>
+<li><p><a class="reference internal" href="src.helper.html#iohandler-notes"><span class="std std-ref">IO Handler</span></a>: how to load pre-generated Poisson filters database, <em>csv</em> and <em>hlsli/c++</em> exports.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="general">
+<h2>General<a class="headerlink" href="#general" title="Permalink to this heading"></a></h2>
+<ul>
+<li><p>This work is based on MAC-Grids.</p></li>
+<li><p>In the context of kernel and filter generation we use <strong>target Jacobi iteration</strong> and <strong>Poisson filters order</strong>
+interchangeably in the code. <em>Order</em> means the target Jacobi iteration of a filter/kernel.</p></li>
+<li><p>See <a class="reference internal" href="src.functions.html#mathlib-convolution-order"><span class="std std-ref">this section</span></a> in <a class="reference internal" href="src.functions.html#mathlib-technicals"><span class="std std-ref">Mathlib Technicals</span></a> for the order
+of convolution when applying Poisson filters in 2D and 3D.</p></li>
+<li><p>When solving an <strong>inverse</strong> Poisson equation (like Poisson pressure) if going with <code class="code docutils literal notranslate"><span class="pre">UNIFIED</span></code> kernel instead of
+<code class="code docutils literal notranslate"><span class="pre">STANDARD</span></code> you need the following sign flip on the right hand side <span class="math notranslate nohighlight">\(b\)</span> in <span class="math notranslate nohighlight">\(Ax=b\)</span> to make it work.
+This is the only downside of benefiting from a <code class="code docutils literal notranslate"><span class="pre">UNIFIED</span></code> kernel.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data_domain</span> <span class="o">*=</span> <span class="o">-</span><span class="mf">1.</span> <span class="k">if</span> <span class="n">opts</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">kernel_type</span> <span class="o">==</span> <span class="n">com</span><span class="o">.</span><span class="n">PoissonKernelType</span><span class="o">.</span><span class="n">UNIFIED</span> <span class="k">else</span> <span class="mf">1.</span>
+</pre></div>
+</div>
+</li>
+<li><p>The Jacobi convergence curve provides a lower bound on the Poisson filter possible solutions. This means
+if there is no numerical loss due to filter reduction or truncation, Poisson filters must exactly match
+the convergence behaviour of Jacobi within machine precision,
+which will be the best case for numerical quality, and worst case performance-wise.
+Any reduction or truncation results in degradation of the convergence behaviour in exchange for performance improvement.</p></li>
+<li><p><em>Problem with SymCP Eigenvalues in tensor decomposition</em>: contrary to 2D, eigenvalues are not necessarily sorted
+in terms of variance explained in 3D. When using grouped ranks, solutions might get worse before getting better
+when including higher ranks. See <em>Safe Rank</em> explanation in <a class="reference internal" href="src.functions.html#decomposition-method"><span class="std std-ref">Decomposition Technicals</span></a>
+for more details on how rank definition is different in 3D.</p></li>
+<li><p>Remember there is no consensus on the definition of tensor eigenvalues. We use the definition that best suits
+our case, and remains consistent for both 2D and 3D filter computations. Such definition is only possible because
+the Poisson kernel is symmetric. See <a class="reference external" href="https://arxiv.org/abs/1403.3720">“All Real Eigenvalues of Symmetric Tensors”, 2014</a>
+and <a class="reference external" href="https://arxiv.org/abs/1008.2923">“A Spectral Theory for Tensors”, 2010</a> .</p></li>
+<li><p>Eigenvalues from <em>SymCP</em> are real (no complex part).</p></li>
+</ul>
+</section>
+<section id="potential-applications-and-future-work">
+<h2>Potential Applications and Future Work<a class="headerlink" href="#potential-applications-and-future-work" title="Permalink to this heading"></a></h2>
+<ul>
+<li><p><strong>Multi-grid smoother</strong>: multi-grid solvers have smoothing steps that are typically iterative. The performance of multi-grid
+solvers can be improved by using high-order Poisson filters in the smoothing step.
+The results will be interesting to observe as we might only need one or very a few multi-grid cycle iterations to converge.</p></li>
+<li><p><strong>Dirichlet boundary</strong>: Current method only supports Neumann boundaries. Addressing Dirichlet boundary treatment with Poisson
+filters will be highly desirable to expand the scope of our method to many application domains that need Dirichlet boundary treatment.</p>
+<p>For instance, one can consider using Poisson filters for <em>Seamless Cloning</em>. You can check out
+<a class="reference external" href="https://www.iro.umontreal.ca/~mignotte/IFT6150/Articles/FourierPoissonEditing.pdf">Fourier implementation of Poisson image editing, 2012</a>
+to see how the Dirichlet boundary can be transformed into a Neumann boundary problem when using spectral methods.
+This method is consistent with the spectral point of view that Poisson filters is based on.</p>
+</li>
+<li><p><strong>Improving Mirror Marching algorithm</strong>: when dealing with Neumann boundaries, current method only marches parallel to
+spatial axes at no angle, which results in perfect solutions around walls but non-ideal artifacts around corners.
+A <em>Scattering Marching</em> algorithm that uses the object surface normals would likely remedy this artifact.</p></li>
+</ul>
+</section>
+<section id="suggested-reads-codes">
+<h2>Suggested Reads/Codes<a class="headerlink" href="#suggested-reads-codes" title="Permalink to this heading"></a></h2>
+<ul>
+<li><p><a class="reference external" href="https://mattferraro.dev/posts/poissons-equation?fbclid=IwAR01mUB0wg4O7hNVjYPWqBAC0mB2K1mNFZyIqgQ-7aIT8fbh5zvERblCdf4">Why Poisson’s equation is so important</a></p></li>
+<li><p>Multi-grid sources for the interested reader in applying Poisson filters as smoother:</p>
+<blockquote>
+<div><ul>
+<li><dl class="simple">
+<dt><strong>Reads</strong></dt><dd><ul class="simple">
+<li><p><a class="reference external" href="http://numerical.recipes/book/book.html">Book of numerical recipes, section 20.6</a></p></li>
+<li><p><a class="reference external" href="https://www.wias-berlin.de/people/john/LEHRE/MULTIGRID/multigrid.pdf">An overview of multigrid methods, 2014</a></p></li>
+<li><p><a class="reference external" href="https://arxiv.org/pdf/1104.1703.pdf">A simple multigrid scheme for solving the Poisson equation with arbitrary domain boundaries, 2011</a></p></li>
+<li><p><a class="reference external" href="https://www.math.ucla.edu/~jteran/papers/MST10.pdf">A parallel multigrid Poisson solver for fluids simulation on large grids, 2010</a></p></li>
+<li><p><a class="reference external" href="https://conference.scipy.org/proceedings/scipy2012/pdfs/tom_bertalan.pdf">OpenMG: A new multigrid implementation in Python, 2012</a></p></li>
+<li><p><a class="reference external" href="https://www.math.uci.edu/~chenlong/226/MGcode.pdf">Programming of multigrid methods</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Codes</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://julianroth.org/documentation/multigrid/index.html">Sample Python code</a></p></li>
+<li><p><a class="reference external" href="https://github.com/NVIDIA/AMGX">C/C++ NVIDIA GPU Accelerated AGMX</a> and <a class="reference external" href="https://github.com/NVIDIA/AMGX/blob/main/doc/AMGX_Reference.pdf">its reference</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pyamg/pyamg">PyAMG</a> and <a class="reference external" href="https://github.com/shwina/pyamgx">PyAMGX</a></p></li>
+<li><p><a class="reference external" href="https://python-hydro.github.io/pyro2/multigrid_basics.html">Python Hydro</a></p></li>
+<li><p><a class="reference external" href="https://github.com/AbhilashReddyM/GeometricMultigrid">Python Geometric Multigrid</a></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="quickstart.html" class="btn btn-neutral float-left" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="code_doc.html" class="btn btn-neutral float-right" title="Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ubisoft.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

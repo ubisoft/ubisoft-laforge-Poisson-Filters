@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>src.demos package &mdash; Compact Poisson Filters 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="src.functions package" href="src.functions.html" />
+    <link rel="prev" title="Documentation" href="code_doc.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Compact Poisson Filters
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes.html">Notes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="code_doc.html">Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">src.demos package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-src.demos.all_examples">src.demos.all_examples module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#quick-access-to-all-demos">Quick access to all demos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.demos.all_examples.DemoName"><code class="docutils literal notranslate"><span class="pre">DemoName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.demos.all_examples.run_demo"><code class="docutils literal notranslate"><span class="pre">run_demo()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-src.demos.boundary">src.demos.boundary module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#src.demos.boundary.add_subplot_matrix"><code class="docutils literal notranslate"><span class="pre">add_subplot_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.demos.boundary.compare_jacobi_poisson_filters_neumann_individual_ranks"><code class="docutils literal notranslate"><span class="pre">compare_jacobi_poisson_filters_neumann_individual_ranks()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.demos.boundary.compare_jacobi_poisson_filters_neumann_simple"><code class="docutils literal notranslate"><span class="pre">compare_jacobi_poisson_filters_neumann_simple()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.demos.boundary.demo_multi_modal_solve_neumann_complex_object_2d"><code class="docutils literal notranslate"><span class="pre">demo_multi_modal_solve_neumann_complex_object_2d()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.demos.boundary.demo_versatile_error_scenarios_neumann_2d"><code class="docutils literal notranslate"><span class="pre">demo_versatile_error_scenarios_neumann_2d()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.demos.boundary.demo_wall_neumann_tiled_mirrored_2d"><code class="docutils literal notranslate"><span class="pre">demo_wall_neumann_tiled_mirrored_2d()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.demos.boundary.run_targeted_experiment"><code class="docutils literal notranslate"><span class="pre">run_targeted_experiment()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-src.demos.convergence">src.demos.convergence module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#convergence-notes">Technicals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.demos.convergence.compare_jacobi_poisson_no_bc_2d"><code class="docutils literal notranslate"><span class="pre">compare_jacobi_poisson_no_bc_2d()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.demos.convergence.demo_3methods_comparison_no_bc_2d"><code class="docutils literal notranslate"><span class="pre">demo_3methods_comparison_no_bc_2d()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.demos.convergence.demo_3methods_comparison_with_wall_neumann_bc_2d"><code class="docutils literal notranslate"><span class="pre">demo_3methods_comparison_with_wall_neumann_bc_2d()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.demos.convergence.demo_adaptive_truncation_analysis_2d"><code class="docutils literal notranslate"><span class="pre">demo_adaptive_truncation_analysis_2d()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.demos.convergence.demo_residual_comparison_jacobi_poisson_filters_infinite_domain"><code class="docutils literal notranslate"><span class="pre">demo_residual_comparison_jacobi_poisson_filters_infinite_domain()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.demos.convergence.plot_adaptive_truncation_info"><code class="docutils literal notranslate"><span class="pre">plot_adaptive_truncation_info()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-src.demos.reductions2d">src.demos.reductions2d module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#src.demos.reductions2d.demo_compare_standard_and_unified_kernels_unreduced_2d"><code class="docutils literal notranslate"><span class="pre">demo_compare_standard_and_unified_kernels_unreduced_2d()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.demos.reductions2d.plot_and_csv_export_truncated_filters_and_modes_2d"><code class="docutils literal notranslate"><span class="pre">plot_and_csv_export_truncated_filters_and_modes_2d()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.demos.reductions2d.plot_modes_filters_2d"><code class="docutils literal notranslate"><span class="pre">plot_modes_filters_2d()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-src.demos.reductions3d">src.demos.reductions3d module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#src.demos.reductions3d.demo_plot_filters_adaptive_truncation_beautified_3d"><code class="docutils literal notranslate"><span class="pre">demo_plot_filters_adaptive_truncation_beautified_3d()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.demos.reductions3d.plot_and_csv_export_truncated_filters_and_modes_3d"><code class="docutils literal notranslate"><span class="pre">plot_and_csv_export_truncated_filters_and_modes_3d()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.demos.reductions3d.quick_process_filters_3d"><code class="docutils literal notranslate"><span class="pre">quick_process_filters_3d()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="src.functions.html">src.functions package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="src.helper.html">src.helper package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="code_index.html">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Compact Poisson Filters</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="code_doc.html">Documentation</a></li>
+      <li class="breadcrumb-item active">src.demos package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/src.demos.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="src-demos-package">
+<h1>src.demos package<a class="headerlink" href="#src-demos-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-src.demos.all_examples">
+<span id="src-demos-all-examples-module"></span><h2>src.demos.all_examples module<a class="headerlink" href="#module-src.demos.all_examples" title="Permalink to this heading"></a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Shahin (Amir Hossein) Rabbani</p>
+</dd>
+<dt class="field-even">contact<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="mailto:shahin&#46;rab&#37;&#52;&#48;gmail&#46;com">shahin<span>&#46;</span>rab<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+</dd>
+<dt class="field-odd">copyright<span class="colon">:</span></dt>
+<dd class="field-odd"><p>See <a class="reference internal" href="license.html#license-page"><span class="std std-ref">License</span></a></p>
+</dd>
+</dl>
+<section id="quick-access-to-all-demos">
+<span id="quick-access-demos-header"></span><h3>Quick access to all demos<a class="headerlink" href="#quick-access-to-all-demos" title="Permalink to this heading"></a></h3>
+<p><em>Example</em>: To print 3D Poisson filters, from <code class="code docutils literal notranslate"><span class="pre">__main__</span></code> run:</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Print 3D Poisson filters</span><a class="headerlink" href="#id2" title="Permalink to this code"></a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">run_demo</span><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="n">DemoName</span><span class="o">.</span><span class="n">IO_PRINT_FILTERS_3D</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Check out <a class="reference internal" href="#src.demos.all_examples.DemoName" title="src.demos.all_examples.DemoName"><code class="xref py py-func docutils literal notranslate"><span class="pre">DemoName()</span></code></a> for all demos. See each method in <code class="code docutils literal notranslate"><span class="pre">src.demos</span></code> for explanation.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If calling the demos from other paths than the current module, you might get errors with data paths when loading
+filter or mask data. Adjust your system path accordingly.</p>
+</div>
+<section id="technicals">
+<h4>Technicals<a class="headerlink" href="#technicals" title="Permalink to this heading"></a></h4>
+<ul>
+<li><p>In all demos try to use odd numbers for the domain size because the data domain needs to be symmetrical for most of         the demos to work properly.</p></li>
+<li><p>A rank range of <span class="math notranslate nohighlight">\(6 \cdots 8\)</span> for 3D, and <span class="math notranslate nohighlight">\(1 \cdots 4\)</span> for 2D is usually sufficient         regardless of the truncation value.</p></li>
+<li><p>Observe when generating the kernel using <code class="code docutils literal notranslate"><span class="pre">com.PoissonSolverType.INVERSE</span></code>, you should multiply the         right hand side <span class="math notranslate nohighlight">\(b\)</span> in <span class="math notranslate nohighlight">\(Ax=b\)</span> by <span class="math notranslate nohighlight">\(-1\)</span>. When using <code class="code docutils literal notranslate"><span class="pre">com.PoissonSolverType.FORWARD</span></code> this         multiplication is not necessary.</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If going with <code class="code docutils literal notranslate"><span class="pre">UNIFIED</span></code> kernel instead of <code class="code docutils literal notranslate"><span class="pre">STANDARD</span></code> you need the following sign flip in the
+<em>RHS</em> data to make it work. This is the only downside of benefiting from a <code class="code docutils literal notranslate"><span class="pre">UNIFIED</span></code> kernel.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data_domain</span> <span class="o">*=</span> <span class="o">-</span><span class="mf">1.</span> <span class="k">if</span> <span class="n">opts</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">kernel_type</span> <span class="o">==</span> <span class="n">com</span><span class="o">.</span><span class="n">PoissonKernelType</span><span class="o">.</span><span class="n">UNIFIED</span> <span class="k">else</span> <span class="mf">1.</span>
+</pre></div>
+</div>
+</div>
+<p>See <code class="xref py py-func docutils literal notranslate"><span class="pre">demos.reductions2d.demo_compare_standard_and_unified_kernels_unreduced_2d()</span></code>.</p>
+</div></blockquote>
+</li>
+</ul>
+</section>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.demos.all_examples.DemoName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.demos.all_examples.</span></span><span class="sig-name descname"><span class="pre">DemoName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.demos.all_examples.DemoName" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.demos.all_examples.DemoName.BOUNDARY_MULTI_MODAL_COMPLEX_OBJECT">
+<span class="sig-name descname"><span class="pre">BOUNDARY_MULTI_MODAL_COMPLEX_OBJECT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#src.demos.all_examples.DemoName.BOUNDARY_MULTI_MODAL_COMPLEX_OBJECT" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.demos.all_examples.DemoName.BOUNDARY_TILED_MIRROR">
+<span class="sig-name descname"><span class="pre">BOUNDARY_TILED_MIRROR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#src.demos.all_examples.DemoName.BOUNDARY_TILED_MIRROR" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.demos.all_examples.DemoName.BOUNDARY_VERSATILE_ERROR_SCENARIOS">
+<span class="sig-name descname"><span class="pre">BOUNDARY_VERSATILE_ERROR_SCENARIOS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#src.demos.all_examples.DemoName.BOUNDARY_VERSATILE_ERROR_SCENARIOS" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.demos.all_examples.DemoName.CONVERGENCE_ADAPTIVE_TRUNCATION_ANALYSIS">
+<span class="sig-name descname"><span class="pre">CONVERGENCE_ADAPTIVE_TRUNCATION_ANALYSIS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#src.demos.all_examples.DemoName.CONVERGENCE_ADAPTIVE_TRUNCATION_ANALYSIS" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.demos.all_examples.DemoName.CONVERGENCE_COMPARE_3_METHODS_INFINITE_DOMAIN">
+<span class="sig-name descname"><span class="pre">CONVERGENCE_COMPARE_3_METHODS_INFINITE_DOMAIN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#src.demos.all_examples.DemoName.CONVERGENCE_COMPARE_3_METHODS_INFINITE_DOMAIN" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.demos.all_examples.DemoName.CONVERGENCE_COMPARE_3_METHODS_WALL_NEUMANN_BOUNDARY">
+<span class="sig-name descname"><span class="pre">CONVERGENCE_COMPARE_3_METHODS_WALL_NEUMANN_BOUNDARY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#src.demos.all_examples.DemoName.CONVERGENCE_COMPARE_3_METHODS_WALL_NEUMANN_BOUNDARY" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.demos.all_examples.DemoName.CONVERGENCE_RESIDUAL_COMPARISON_INFINITE_DOMAIN">
+<span class="sig-name descname"><span class="pre">CONVERGENCE_RESIDUAL_COMPARISON_INFINITE_DOMAIN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">11</span></em><a class="headerlink" href="#src.demos.all_examples.DemoName.CONVERGENCE_RESIDUAL_COMPARISON_INFINITE_DOMAIN" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.demos.all_examples.DemoName.DECOMPOSITION_EIGENVALUE_ABSORPTION_TEST_2D">
+<span class="sig-name descname"><span class="pre">DECOMPOSITION_EIGENVALUE_ABSORPTION_TEST_2D</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">20</span></em><a class="headerlink" href="#src.demos.all_examples.DemoName.DECOMPOSITION_EIGENVALUE_ABSORPTION_TEST_2D" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.demos.all_examples.DemoName.IO_DATABASE_GENERATE_2D">
+<span class="sig-name descname"><span class="pre">IO_DATABASE_GENERATE_2D</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16</span></em><a class="headerlink" href="#src.demos.all_examples.DemoName.IO_DATABASE_GENERATE_2D" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.demos.all_examples.DemoName.IO_DATABASE_GENERATE_3D">
+<span class="sig-name descname"><span class="pre">IO_DATABASE_GENERATE_3D</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">17</span></em><a class="headerlink" href="#src.demos.all_examples.DemoName.IO_DATABASE_GENERATE_3D" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.demos.all_examples.DemoName.IO_DATABASE_SINGLE_FILTER_2D">
+<span class="sig-name descname"><span class="pre">IO_DATABASE_SINGLE_FILTER_2D</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">18</span></em><a class="headerlink" href="#src.demos.all_examples.DemoName.IO_DATABASE_SINGLE_FILTER_2D" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.demos.all_examples.DemoName.IO_DATABASE_SINGLE_FILTER_3D">
+<span class="sig-name descname"><span class="pre">IO_DATABASE_SINGLE_FILTER_3D</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">19</span></em><a class="headerlink" href="#src.demos.all_examples.DemoName.IO_DATABASE_SINGLE_FILTER_3D" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.demos.all_examples.DemoName.IO_GENERATE_FILTERS_EXPORT_HLSLI_2D">
+<span class="sig-name descname"><span class="pre">IO_GENERATE_FILTERS_EXPORT_HLSLI_2D</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">14</span></em><a class="headerlink" href="#src.demos.all_examples.DemoName.IO_GENERATE_FILTERS_EXPORT_HLSLI_2D" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.demos.all_examples.DemoName.IO_GENERATE_FILTERS_EXPORT_HLSLI_3D">
+<span class="sig-name descname"><span class="pre">IO_GENERATE_FILTERS_EXPORT_HLSLI_3D</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">15</span></em><a class="headerlink" href="#src.demos.all_examples.DemoName.IO_GENERATE_FILTERS_EXPORT_HLSLI_3D" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.demos.all_examples.DemoName.IO_PRINT_FILTERS_2D">
+<span class="sig-name descname"><span class="pre">IO_PRINT_FILTERS_2D</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">12</span></em><a class="headerlink" href="#src.demos.all_examples.DemoName.IO_PRINT_FILTERS_2D" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.demos.all_examples.DemoName.IO_PRINT_FILTERS_3D">
+<span class="sig-name descname"><span class="pre">IO_PRINT_FILTERS_3D</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">13</span></em><a class="headerlink" href="#src.demos.all_examples.DemoName.IO_PRINT_FILTERS_3D" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.demos.all_examples.DemoName.REDUCTIONS_2D_COMPARE_UNIFIED_STANDARD_KERNELS">
+<span class="sig-name descname"><span class="pre">REDUCTIONS_2D_COMPARE_UNIFIED_STANDARD_KERNELS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#src.demos.all_examples.DemoName.REDUCTIONS_2D_COMPARE_UNIFIED_STANDARD_KERNELS" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.demos.all_examples.DemoName.REDUCTIONS_2D_PLOT_KERNEL_MODES_FILTERS_CSV_EXPORT">
+<span class="sig-name descname"><span class="pre">REDUCTIONS_2D_PLOT_KERNEL_MODES_FILTERS_CSV_EXPORT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#src.demos.all_examples.DemoName.REDUCTIONS_2D_PLOT_KERNEL_MODES_FILTERS_CSV_EXPORT" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.demos.all_examples.DemoName.REDUCTIONS_3D_PLOT_FILTERS_TRUNCATION_BEAUTIFIED">
+<span class="sig-name descname"><span class="pre">REDUCTIONS_3D_PLOT_FILTERS_TRUNCATION_BEAUTIFIED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#src.demos.all_examples.DemoName.REDUCTIONS_3D_PLOT_FILTERS_TRUNCATION_BEAUTIFIED" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.demos.all_examples.DemoName.REDUCTIONS_3D_PLOT_KERNEL_MODES_FILTERS_CSV_EXPORT">
+<span class="sig-name descname"><span class="pre">REDUCTIONS_3D_PLOT_KERNEL_MODES_FILTERS_CSV_EXPORT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#src.demos.all_examples.DemoName.REDUCTIONS_3D_PLOT_KERNEL_MODES_FILTERS_CSV_EXPORT" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.demos.all_examples.run_demo">
+<span class="sig-prename descclassname"><span class="pre">src.demos.all_examples.</span></span><span class="sig-name descname"><span class="pre">run_demo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">which</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.demos.all_examples.run_demo" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>which</strong> (<a class="reference internal" href="#src.demos.all_examples.DemoName" title="src.demos.all_examples.DemoName"><em>DemoName</em></a>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-src.demos.boundary">
+<span id="src-demos-boundary-module"></span><h2>src.demos.boundary module<a class="headerlink" href="#module-src.demos.boundary" title="Permalink to this heading"></a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Shahin (Amir Hossein) Rabbani</p>
+</dd>
+<dt class="field-even">contact<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="mailto:shahin&#46;rab&#37;&#52;&#48;gmail&#46;com">shahin<span>&#46;</span>rab<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+</dd>
+<dt class="field-odd">copyright<span class="colon">:</span></dt>
+<dd class="field-odd"><p>See <a class="reference internal" href="license.html#license-page"><span class="std std-ref">License</span></a></p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.demos.boundary.add_subplot_matrix">
+<span class="sig-prename descclassname"><span class="pre">src.demos.boundary.</span></span><span class="sig-name descname"><span class="pre">add_subplot_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subplot_matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts_subplots</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sub_plots</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collision_mask</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contour_mask</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clean_obj_mask_solution_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.demos.boundary.add_subplot_matrix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.demos.boundary.compare_jacobi_poisson_filters_neumann_individual_ranks">
+<span class="sig-prename descclassname"><span class="pre">src.demos.boundary.</span></span><span class="sig-name descname"><span class="pre">compare_jacobi_poisson_filters_neumann_individual_ranks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">opts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collision_mask_fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">individual_ranks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.demos.boundary.compare_jacobi_poisson_filters_neumann_individual_ranks" title="Permalink to this definition"></a></dt>
+<dd><p>Break down of the Poisson filters solve with individual rank contributions and their cumulative sum.
+With wall and complex object Neumann boundary treatment using <em>mirror marching</em> algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>opts</strong> (<a class="reference internal" href="src.helper.html#src.helper.commons.OptionsGeneral" title="src.helper.commons.OptionsGeneral"><em>OptionsGeneral</em></a>) – </p></li>
+<li><p><strong>collision_mask_fname</strong> (<em>str</em>) – collision mask file name. See <code class="xref py py-func docutils literal notranslate"><span class="pre">functions.analytics.generate_collision_mask()</span></code></p></li>
+<li><p><strong>individual_ranks</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) – list of ranks to be included. Ranks do not have to be consecutive.</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – show logs</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Jacobi solution, Poisso filters solution and its individual rank contributions, absolute and relative
+errors, SSIM components</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.demos.boundary.compare_jacobi_poisson_filters_neumann_simple">
+<span class="sig-prename descclassname"><span class="pre">src.demos.boundary.</span></span><span class="sig-name descname"><span class="pre">compare_jacobi_poisson_filters_neumann_simple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">opts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collision_mask_fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.demos.boundary.compare_jacobi_poisson_filters_neumann_simple" title="Permalink to this definition"></a></dt>
+<dd><p>Run a specific experiment to compare ground truth Jacobi solution and Poisson filters solution with Neumann     boundary treatment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>opts</strong> (<a class="reference internal" href="src.helper.html#src.helper.commons.OptionsGeneral" title="src.helper.commons.OptionsGeneral"><em>OptionsGeneral</em></a>) – </p></li>
+<li><p><strong>collision_mask_fname</strong> (<em>str</em>) – collision mask file name. See <code class="xref py py-func docutils literal notranslate"><span class="pre">functions.analytics.generate_collision_mask()</span></code></p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – show logs</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>ground truth Jacobi solution, Poisson filters solution, errors, generated domain data, collision and         contour masks, SSIM components, safe rank</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.demos.boundary.demo_multi_modal_solve_neumann_complex_object_2d">
+<span class="sig-prename descclassname"><span class="pre">src.demos.boundary.</span></span><span class="sig-name descname"><span class="pre">demo_multi_modal_solve_neumann_complex_object_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.demos.boundary.demo_multi_modal_solve_neumann_complex_object_2d" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the break down of the Poisson filters solve visualizing individual rank contributions and their cumulative sum.
+With wall and complex object Neumann boundary treatment using <em>mirror marching</em> algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>order</strong> (<em>int</em>) – filter order (target iteration)</p></li>
+<li><p><strong>rank</strong> (<em>int</em>) – how many ranks in decomposition (8 or less is usually enough).</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – show logs</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.demos.boundary.demo_versatile_error_scenarios_neumann_2d">
+<span class="sig-prename descclassname"><span class="pre">src.demos.boundary.</span></span><span class="sig-name descname"><span class="pre">demo_versatile_error_scenarios_neumann_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rank</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.demos.boundary.demo_versatile_error_scenarios_neumann_2d" title="Permalink to this definition"></a></dt>
+<dd><p>Experimenting with various scenarios with different truncation values and Poisson filters order     (target Jacobi iteration).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Solving with current settings might take a while, be patient!</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rank</strong> (<em>int</em>) – how many ranks in decomposition (8 or less is usually enough).</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – show logs</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.demos.boundary.demo_wall_neumann_tiled_mirrored_2d">
+<span class="sig-prename descclassname"><span class="pre">src.demos.boundary.</span></span><span class="sig-name descname"><span class="pre">demo_wall_neumann_tiled_mirrored_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.demos.boundary.demo_wall_neumann_tiled_mirrored_2d" title="Permalink to this definition"></a></dt>
+<dd><p>Enforcing Neumann boundary using data reflection technique. Here the input data
+is extended by tiled mirrors on both horizontal and vertical axes. Solving with <span class="math notranslate nohighlight">\(n\)</span> iteration
+Jacobi for the input data with explicit Neumann boundary enforcement must be equivalent to
+convolving the much larger tiled mirrored data with Poisson filters without an explicit boundary
+condition enforcement. Boundary condition seeks to achieve zero gradient on the edge of the cell</p>
+<p>This only works for Neumann, and is the basis for our <em>mirror marching</em> algorithm (see paper).
+This method is similar to what spectral methods use for enforcing Neumann boundary condition.</p>
+<p><strong>How it works</strong>: based on the target iteration we compute how much padding the input data needs
+so that shrinkage of the extended data due to convolution still gives the same matrix size as
+performing Jacobi after <span class="math notranslate nohighlight">\(n\)</span> iteration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>order</strong> (<em>int</em>) – filter order (target iteration)</p></li>
+<li><p><strong>rank</strong> (<em>int</em>) – how many ranks in decomposition (8 or less is usually enough)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.demos.boundary.run_targeted_experiment">
+<span class="sig-prename descclassname"><span class="pre">src.demos.boundary.</span></span><span class="sig-name descname"><span class="pre">run_targeted_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">truncation_method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">truncation_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts_general</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collision_mask_fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_ssim_diff_instead_of_abs_err</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.demos.boundary.run_targeted_experiment" title="Permalink to this definition"></a></dt>
+<dd><p>Run a specific experiment to compare ground truth Jacobi solution and Poisson filters solution with Neumann     boundary treatment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>order</strong> (<em>int</em>) – filter order (target iteration)</p></li>
+<li><p><strong>rank</strong> (<em>int</em>) – how many ranks in decomposition (8 or less is usually enough).</p></li>
+<li><p><strong>truncation_method</strong> (<a class="reference internal" href="src.helper.html#src.helper.commons.TruncationMode" title="src.helper.commons.TruncationMode"><em>TruncationMode</em></a>) – See <code class="xref py py-func docutils literal notranslate"><span class="pre">TruncationMode()</span></code></p></li>
+<li><p><strong>truncation_value</strong> (<em>float</em>) – <code class="xref py py-func docutils literal notranslate"><span class="pre">TruncationMode()</span></code></p></li>
+<li><p><strong>opts_general</strong> (<a class="reference internal" href="src.helper.html#src.helper.commons.OptionsGeneral" title="src.helper.commons.OptionsGeneral"><em>OptionsGeneral</em></a>) – </p></li>
+<li><p><strong>collision_mask_fname</strong> (<em>str</em>) – collision mask file name. See <code class="xref py py-func docutils literal notranslate"><span class="pre">functions.analytics.generate_collision_mask()</span></code></p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – show logs</p></li>
+<li><p><strong>show_ssim_diff_instead_of_abs_err</strong> (<em>bool</em>) – use SSIM instead of absolute error for the difference</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>ground truth Jacobi, error of Poisson filters solution, collision mask, contour mask</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-src.demos.convergence">
+<span id="src-demos-convergence-module"></span><h2>src.demos.convergence module<a class="headerlink" href="#module-src.demos.convergence" title="Permalink to this heading"></a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Shahin (Amir Hossein) Rabbani</p>
+</dd>
+<dt class="field-even">contact<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="mailto:shahin&#46;rab&#37;&#52;&#48;gmail&#46;com">shahin<span>&#46;</span>rab<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+</dd>
+<dt class="field-odd">copyright<span class="colon">:</span></dt>
+<dd class="field-odd"><p>See <a class="reference internal" href="license.html#license-page"><span class="std std-ref">License</span></a></p>
+</dd>
+</dl>
+<section id="convergence-notes">
+<span id="id1"></span><h3>Technicals<a class="headerlink" href="#convergence-notes" title="Permalink to this heading"></a></h3>
+<ul>
+<li><dl>
+<dt><em>Adaptive truncation</em>:</dt><dd><p>Adaptive truncation is based on the ceiling of filter sizes, i.e. maximum filter size needed for a given
+rank group given a fixed filter value threshold.         We can further optimize this by doing per rank filter truncation per iteration as there might         certain ranks whose filters can still have elements below the threshold.         In general this is a minor optimization and does not have a
+very significant effect on the performance, but it can make the implementation more complicated,         so we did not use it in our results in the paper.</p>
+<p>See <a class="reference internal" href="#src.demos.convergence.demo_adaptive_truncation_analysis_2d" title="src.demos.convergence.demo_adaptive_truncation_analysis_2d"><code class="xref py py-func docutils literal notranslate"><span class="pre">demo_adaptive_truncation_analysis_2d()</span></code></a> for adaptive truncation per individual rank as well as         Poisson filters memory footprint.</p>
+</dd>
+</dl>
+</li>
+<li><p>When solving the <em>inverse</em> Poisson equation, you can generate Poisson kernels with <span class="math notranslate nohighlight">\(\alpha=1\)</span>         then just scale the right hand side <span class="math notranslate nohighlight">\(b\)</span> in <span class="math notranslate nohighlight">\(Ax=b\)</span>.</p></li>
+</ul>
+</section>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.demos.convergence.compare_jacobi_poisson_no_bc_2d">
+<span class="sig-prename descclassname"><span class="pre">src.demos.convergence.</span></span><span class="sig-name descname"><span class="pre">compare_jacobi_poisson_no_bc_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">opts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.demos.convergence.compare_jacobi_poisson_no_bc_2d" title="Permalink to this definition"></a></dt>
+<dd><p>Compare Jacobi solution and its residual in the <em>matrix-form</em> to that of the Poisson kernel convolution for an     infinite domain (See <a class="reference internal" href="#src.demos.convergence.demo_3methods_comparison_no_bc_2d" title="src.demos.convergence.demo_3methods_comparison_no_bc_2d"><code class="xref py py-func docutils literal notranslate"><span class="pre">demo_3methods_comparison_no_bc_2d()</span></code></a> for an explanation of the infinite domain).</p>
+<p>The Jacobi convergence curve provides a lower bound on the Poisson filter possible solutions. This means     if there is no numerical loss due to filter reductions or truncations, Poisson filters must exactly match     the convergence behaviour of Jacobi within machine precision,     which will be the best case for numerical quality, and worst case performance-wise.</p>
+<p>Any reduction or truncation results in degradation of the convergence behaviour in exchange for performance speed up.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>IMPORTANT!</strong></p>
+<p>If going with <code class="code docutils literal notranslate"><span class="pre">UNIFIED</span></code> kernel instead of <code class="code docutils literal notranslate"><span class="pre">STANDARD</span></code> you need the following sign flip in the rhs
+data to make it work. This is the only downside of benefiting from a <code class="code docutils literal notranslate"><span class="pre">UNIFIED</span></code> kernel.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data_domain</span> <span class="o">*=</span> <span class="o">-</span><span class="mf">1.</span> <span class="k">if</span> <span class="n">opts</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">kernel_type</span> <span class="o">==</span> <span class="n">com</span><span class="o">.</span><span class="n">PoissonKernelType</span><span class="o">.</span><span class="n">UNIFIED</span> <span class="k">else</span> <span class="mf">1.</span>
+</pre></div>
+</div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>opts</strong> (<a class="reference internal" href="src.helper.html#src.helper.commons.OptionsGeneral" title="src.helper.commons.OptionsGeneral"><em>OptionsGeneral</em></a>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Jacobi solution and residuals, Poisson filter solution and residual, errors and generated data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.demos.convergence.demo_3methods_comparison_no_bc_2d">
+<span class="sig-prename descclassname"><span class="pre">src.demos.convergence.</span></span><span class="sig-name descname"><span class="pre">demo_3methods_comparison_no_bc_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_full_poisson_kernel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.demos.convergence.demo_3methods_comparison_no_bc_2d" title="Permalink to this definition"></a></dt>
+<dd><p><em>Sanity check</em>: compare Jacobi solutions, one from the flattened <span class="math notranslate nohighlight">\(Ax=b\)</span> (<em>A.K.A. vector-form</em>) and     one for the <em>matrix-form</em>. Also compare them with the Poisson kernel solution achieved     through convolution <span class="math notranslate nohighlight">\(L*X=B\)</span>.</p>
+<p>This is without Neumann boundary enforcement. This effectively means an <em>infinite domain</em> setup.     Infinite domain is achieved by dynamically padding the input data based on the desired     Jacobi iteration. In other words, we pad the data with sufficiently large blocks so the     effects of the wall boundaries never reach inside the domain, where the original much     smaller input data exists.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Poisson kernel (and subsequently its separable filters) are computed based on the <em>matrix-form</em>,         so for an infinite domain without any boundary treatment the solution using the Poisson kernel and the         one from the <em>matrix-form</em> of Jacobi must match to the machine precision.</p>
+</div>
+<p>In case of using the full kernel, there is no reduction, so we expect an exact match     between Jacobi <em>matrix-form</em> and the Poisson filters solution. You can however experiment using Poisson     filters by setting <code class="code docutils literal notranslate"><span class="pre">use_full_poisson_kernel=False</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>order</strong> (<em>int</em>) – filter order (target iteration)</p></li>
+<li><p><strong>rank</strong> (<em>int</em>) – how many ranks in decomposition (8 or less is usually enough).
+Only used when in reduction mode.</p></li>
+<li><p><strong>use_full_poisson_kernel</strong> (<em>bool</em>) – if <code class="code docutils literal notranslate"><span class="pre">True</span></code> there is no reduction, full kernel convolution.
+If <code class="code docutils literal notranslate"><span class="pre">False</span></code>, we are either using the reduced square Poisson kernel, or
+just using the separable filters. Look inside the code for comments on <code class="code docutils literal notranslate"><span class="pre">reduce</span></code> and
+<code class="code docutils literal notranslate"><span class="pre">use_separable_filters</span></code> variables.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.demos.convergence.demo_3methods_comparison_with_wall_neumann_bc_2d">
+<span class="sig-prename descclassname"><span class="pre">src.demos.convergence.</span></span><span class="sig-name descname"><span class="pre">demo_3methods_comparison_with_wall_neumann_bc_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.demos.convergence.demo_3methods_comparison_with_wall_neumann_bc_2d" title="Permalink to this definition"></a></dt>
+<dd><p><em>Sanity check</em>: compare Jacobi solutions, one from the flattened <span class="math notranslate nohighlight">\(Ax=b\)</span> (<em>A.K.A. vector-form</em>) and     one for the <em>matrix-form</em>. Also compare them with the Poisson kernel solution achieved     through convolution <span class="math notranslate nohighlight">\(L*X=B\)</span>.</p>
+<p>This is with Neumann boundary enforcement. Only for walls. No complex object.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The solutions to Poisson filters and Jacobi <em>matrix-form</em> are supposed to match, but we should
+expect slight difference between Jacobi <em>matrix-form</em> and Jacobi <em>vector-form</em> due to the way that
+they deal with corner domain boundary treatment. The results in the paper are achieved with a         GPU implementation, where we use Jacobi <em>matrix-form</em>, so as long as         Poisson filters and Jacobi <em>matrix-form</em> match we are good.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>order</strong> (<em>int</em>) – filter order (target iteration)</p></li>
+<li><p><strong>rank</strong> (<em>int</em>) – how many ranks in decomposition (8 or less is usually enough).
+Only used when in reduction mode.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.demos.convergence.demo_adaptive_truncation_analysis_2d">
+<span class="sig-prename descclassname"><span class="pre">src.demos.convergence.</span></span><span class="sig-name descname"><span class="pre">demo_adaptive_truncation_analysis_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.demos.convergence.demo_adaptive_truncation_analysis_2d" title="Permalink to this definition"></a></dt>
+<dd><p>Plot maximum rank needed per target iteration given a desired adaptive truncation value,     as well as the Poisson filters memory footprint.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In practice little improvement on convergence is observed by using different ranks for different         adaptive truncation values. It is safe to use a sufficiently large rank for all target iterations.         This helps avoid complicating the implementation. A rank range of <span class="math notranslate nohighlight">\(6 \cdots 8\)</span> for 3D, and         <span class="math notranslate nohighlight">\(1 \cdots 4\)</span> for 2D is usually sufficient regardless of the truncation value.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note the sub-linear memory footprint of the filters as the target iteration grows.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>order</strong> (<em>int</em>) – filter order (target iteration)</p></li>
+<li><p><strong>rank</strong> (<em>int</em>) – how many ranks in decomposition (8 or less is usually enough).
+Only used when in reduction mode.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.demos.convergence.demo_residual_comparison_jacobi_poisson_filters_infinite_domain">
+<span class="sig-prename descclassname"><span class="pre">src.demos.convergence.</span></span><span class="sig-name descname"><span class="pre">demo_residual_comparison_jacobi_poisson_filters_infinite_domain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">truncation_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_full_poisson_kernel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.demos.convergence.demo_residual_comparison_jacobi_poisson_filters_infinite_domain" title="Permalink to this definition"></a></dt>
+<dd><p>Compare Jacobi solution and its residual in the <em>matrix-form</em> to that of the Poisson kernel     convolution.</p>
+<p>Option to use full Poisson kernel (machine precision error is expected compared to Jacobi), or
+truncated Poisson filters (<code class="code docutils literal notranslate"><span class="pre">use_full_poisson_kernel=False</span></code>)</p>
+<p>This is without boundary enforcement. This effectively means an infinite domain setup.
+Infinite domain is achieved by dynamically padding the input data based on the desired
+Jacobi iteration. In other words, we pad the data with sufficiently large blocks so the
+effects of the wall boundaries never reach inside the domain, where the original much
+smaller input data exists.</p>
+<p>In case of using the full kernel, there is no reduction, so we expect an exact match
+between Jacobi <em>matrix-form</em> and the Poisson filters solution.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The residual comparison is only valid for <em>inverse</em> Poisson setup. If you ever decide          to use the <em>forward</em> Poisson setup keep in mind that while plotting residuals is not reliable         (because of the way we compute residuals in our implementation),        the actual solutions to Jacobi and Poisson filters perfectly match, as demonstrated in paper results.</p>
+<p>The implementation of the <em>matrix form</em> residual for <em>forward</em> Poisson is future work.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>order</strong> (<em>int</em>) – filter order (target iteration)</p></li>
+<li><p><strong>rank</strong> (<em>int</em>) – how many ranks in decomposition (8 or less is usually enough).
+Only used when in reduction mode.</p></li>
+<li><p><strong>truncation_value</strong> (<em>float</em>) – cut-off threshold to trim the filters, given the truncation
+method in this demo is set to <code class="code docutils literal notranslate"><span class="pre">FIXED_THRESHOLD</span></code>. A <code class="code docutils literal notranslate"><span class="pre">0</span></code> value means no truncation.</p></li>
+<li><p><strong>use_full_poisson_kernel</strong> (<em>bool</em>) – if <code class="code docutils literal notranslate"><span class="pre">True</span></code> there is no reduction, full kernel convolution.
+If <code class="code docutils literal notranslate"><span class="pre">False</span></code>, we are either using the reduced square Poisson kernel, or
+just using the separable filters. Look inside the code for comments on <code class="code docutils literal notranslate"><span class="pre">reduce</span></code> and
+<code class="code docutils literal notranslate"><span class="pre">use_separable_filters</span></code> variables.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.demos.convergence.plot_adaptive_truncation_info">
+<span class="sig-prename descclassname"><span class="pre">src.demos.convergence.</span></span><span class="sig-name descname"><span class="pre">plot_adaptive_truncation_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trunc_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank_filter_info_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.demos.convergence.plot_adaptive_truncation_info" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>trunc_list</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – </p></li>
+<li><p><strong>rank_filter_info_list</strong> (<em>List</em><em>[</em><em>tuple</em><em>]</em>) – </p></li>
+<li><p><strong>color_list</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-src.demos.reductions2d">
+<span id="src-demos-reductions2d-module"></span><h2>src.demos.reductions2d module<a class="headerlink" href="#module-src.demos.reductions2d" title="Permalink to this heading"></a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Shahin (Amir Hossein) Rabbani</p>
+</dd>
+<dt class="field-even">contact<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="mailto:shahin&#46;rab&#37;&#52;&#48;gmail&#46;com">shahin<span>&#46;</span>rab<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+</dd>
+<dt class="field-odd">copyright<span class="colon">:</span></dt>
+<dd class="field-odd"><p>See <a class="reference internal" href="license.html#license-page"><span class="std std-ref">License</span></a></p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.demos.reductions2d.demo_compare_standard_and_unified_kernels_unreduced_2d">
+<span class="sig-prename descclassname"><span class="pre">src.demos.reductions2d.</span></span><span class="sig-name descname"><span class="pre">demo_compare_standard_and_unified_kernels_unreduced_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.demos.reductions2d.demo_compare_standard_and_unified_kernels_unreduced_2d" title="Permalink to this definition"></a></dt>
+<dd><p>Visually inspecting the differences and similarities between two ways of kernel generation, namely
+<code class="code docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="code docutils literal notranslate"><span class="pre">Unified</span></code>. Both are full kernels (unreduced) of the same order (same target iteration).</p>
+<p>For more info see <code class="xref py py-func docutils literal notranslate"><span class="pre">helper.common.PoissonKernelType()</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Observe how the two kernels are the inverse of each other when         <code class="code docutils literal notranslate"><span class="pre">solver_type</span> <span class="pre">=</span> <span class="pre">com.PoissonSolverType.INVERSE</span></code>, while they are the same for <code class="code docutils literal notranslate"><span class="pre">FORWARD</span></code>.         When solving the <em>inverse</em> Poisson equation, you should multiply the right hand side <span class="math notranslate nohighlight">\(b\)</span> in <span class="math notranslate nohighlight">\(Ax=b\)</span>         by <span class="math notranslate nohighlight">\(-1\)</span>.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>order</strong> (<em>int</em>) – filter order (target iteration)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.demos.reductions2d.plot_and_csv_export_truncated_filters_and_modes_2d">
+<span class="sig-prename descclassname"><span class="pre">src.demos.reductions2d.</span></span><span class="sig-name descname"><span class="pre">plot_and_csv_export_truncated_filters_and_modes_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">export_csv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_trim_zeros</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.demos.reductions2d.plot_and_csv_export_truncated_filters_and_modes_2d" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the full Poisson kernel, reduce it based on a desired rank, and plot     the full kernel, the reduced one, the modes and separable filters.</p>
+<p>Option to export as csv. CSV export is useful, for instance, to load and plot filters in Mathematica.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Filter and mode csv files can be found in <code class="code docutils literal notranslate"><span class="pre">data/preprocess/components/</span></code>.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>order</strong> (<em>int</em>) – filter order (target iteration)</p></li>
+<li><p><strong>rank</strong> (<em>int</em>) – how many ranks in decomposition (8 or less is usually enough)</p></li>
+<li><p><strong>export_csv</strong> (<em>bool</em>) – exporting the modes and filters as .csv</p></li>
+<li><p><strong>filter_trim_zeros</strong> (<em>bool</em>) – <code class="code docutils literal notranslate"><span class="pre">True</span></code> if you want to trim the already zeroed-out elements due to adaptive truncation</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.demos.reductions2d.plot_modes_filters_2d">
+<span class="sig-prename descclassname"><span class="pre">src.demos.reductions2d.</span></span><span class="sig-name descname"><span class="pre">plot_modes_filters_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">opts_plots</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_modes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_filters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safe_rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">specs_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.demos.reductions2d.plot_modes_filters_2d" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>opts_plots</strong> (<a class="reference internal" href="src.helper.html#src.helper.commons.OptionsPlots" title="src.helper.commons.OptionsPlots"><em>OptionsPlots</em></a>) – </p></li>
+<li><p><strong>all_modes</strong> (<em>List</em><em>[</em><em>ndarray</em><em>]</em>) – </p></li>
+<li><p><strong>all_filters</strong> (<em>List</em><em>[</em><em>ndarray</em><em>]</em>) – </p></li>
+<li><p><strong>safe_rank</strong> (<em>int</em>) – </p></li>
+<li><p><strong>specs_info</strong> (<em>str</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-src.demos.reductions3d">
+<span id="src-demos-reductions3d-module"></span><h2>src.demos.reductions3d module<a class="headerlink" href="#module-src.demos.reductions3d" title="Permalink to this heading"></a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Shahin (Amir Hossein) Rabbani</p>
+</dd>
+<dt class="field-even">contact<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="mailto:shahin&#46;rab&#37;&#52;&#48;gmail&#46;com">shahin<span>&#46;</span>rab<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+</dd>
+<dt class="field-odd">copyright<span class="colon">:</span></dt>
+<dd class="field-odd"><p>See <a class="reference internal" href="license.html#license-page"><span class="std std-ref">License</span></a></p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.demos.reductions3d.demo_plot_filters_adaptive_truncation_beautified_3d">
+<span class="sig-prename descclassname"><span class="pre">src.demos.reductions3d.</span></span><span class="sig-name descname"><span class="pre">demo_plot_filters_adaptive_truncation_beautified_3d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_gen_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'load'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_custom_style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visualize_truncation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.demos.reductions3d.demo_plot_filters_adaptive_truncation_beautified_3d" title="Permalink to this definition"></a></dt>
+<dd><p>Plot beautified filters with added visuals for the truncated areas. This works only for
+<code class="code docutils literal notranslate"><span class="pre">com.TruncationMode.FIXED_THRESHOLD</span></code> (adaptive truncation).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>order</strong> (<em>int</em>) – filter order (target iteration)</p></li>
+<li><p><strong>rank</strong> (<em>int</em>) – how many ranks in decomposition (8 or less is usually enough)</p></li>
+<li><p><strong>filter_gen_method</strong> (<em>str</em>) – <code class="code docutils literal notranslate"><span class="pre">'load'</span></code> or <code class="code docutils literal notranslate"><span class="pre">'generate'</span></code>. A valid database containing the filters must
+already exist in <code class="code docutils literal notranslate"><span class="pre">data/preprocess/filters/</span></code> if choosing to load; else generate them fresh.</p></li>
+<li><p><strong>use_custom_style</strong> (<em>bool</em>) – allows for custom background</p></li>
+<li><p><strong>visualize_truncation</strong> (<em>bool</em>) – draw the threshold</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.demos.reductions3d.plot_and_csv_export_truncated_filters_and_modes_3d">
+<span class="sig-prename descclassname"><span class="pre">src.demos.reductions3d.</span></span><span class="sig-name descname"><span class="pre">plot_and_csv_export_truncated_filters_and_modes_3d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">export_csv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_trim_zeros</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.demos.reductions3d.plot_and_csv_export_truncated_filters_and_modes_3d" title="Permalink to this definition"></a></dt>
+<dd><p>Generates and plots the Poisson filters for the 3D case, for a given rank and truncation method/value.</p>
+<p>Option to export as csv. CSV export is useful, for instance, to load and plot filters in Mathematica.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Filter and mode csv files can be found in <code class="code docutils literal notranslate"><span class="pre">data/preprocess/components/</span></code>.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>order</strong> (<em>int</em>) – filter order (target iteration)</p></li>
+<li><p><strong>rank</strong> (<em>int</em>) – how many ranks in decomposition (8 or less is usually enough)</p></li>
+<li><p><strong>export_csv</strong> (<em>int</em>) – exporting the modes and filters as .csv.</p></li>
+<li><p><strong>filter_trim_zeros</strong> (<em>bool</em>) – <code class="code docutils literal notranslate"><span class="pre">True</span></code> if you want to trim the already zeroed-out elements due to adaptive truncation</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.demos.reductions3d.quick_process_filters_3d">
+<span class="sig-prename descclassname"><span class="pre">src.demos.reductions3d.</span></span><span class="sig-name descname"><span class="pre">quick_process_filters_3d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">single_itr_num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safe_rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_trim_zeros</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_gen_method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preserve_shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.demos.reductions3d.quick_process_filters_3d" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>single_itr_num</strong> (<em>int</em>) – target iteration</p></li>
+<li><p><strong>safe_rank</strong> (<em>int</em>) – how many ranks in decomposition (8 or less is usually enough)</p></li>
+<li><p><strong>filter_trim_zeros</strong> (<em>bool</em>) – <code class="code docutils literal notranslate"><span class="pre">True</span></code> if you want to trim the already zeroed-out elements due to adaptive truncation</p></li>
+<li><p><strong>filter_gen_method</strong> (<em>str</em>) – <code class="code docutils literal notranslate"><span class="pre">'load'</span></code> or <code class="code docutils literal notranslate"><span class="pre">'generate'</span></code></p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="src.helper.html#src.helper.commons.OptionsGeneral" title="src.helper.commons.OptionsGeneral"><em>OptionsGeneral</em></a>) – </p></li>
+<li><p><strong>preserve_shape</strong> (<em>bool</em>) – if <code class="code docutils literal notranslate"><span class="pre">True</span></code> keep the original shape and fill them with zeros,
+else return the shrunk filter (Default= <code class="code docutils literal notranslate"><span class="pre">True</span></code>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>processed filters and filter titles</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="code_doc.html" class="btn btn-neutral float-left" title="Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="src.functions.html" class="btn btn-neutral float-right" title="src.functions package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ubisoft.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

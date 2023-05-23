@@ -1,0 +1,12 @@
+# Recommended python version: 3.7 or newer.
+# The key Python 3.7 feature used in the project is `dataclass <https://docs.python.org/3/library/dataclasses.html#module-dataclasses>`.
+numpy>=1.21.6
+typing>=3.7.4.3
+matplotlib>=3.5.3
+scikit-image>=0.19.3
+dataclasses>=0.6  # dataclass needs python 3.7, replace it with NamedTuple if python 3.6
+opencv-python>=4.4.0.42  # no need for the latest version. Use this version to avoid the long installation.
+scipy>=1.7.3
+seaborn>=0.11.2
+tensorly>=0.6.0  # conda install -c tensorly tensorly
+aenum>=3.1.11
