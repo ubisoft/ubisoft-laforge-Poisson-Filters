@@ -31,7 +31,7 @@ Start with `docs/build/html/index.html`. You will find a quick start on how to r
 
 Note that we provide already computed filters in `.hlsi` and `.npz` formats accessible in `data/preprocess/filters`. To use them in your own applications you don't have to run anything! 
 
-For example, filter values for solving the 3D Poisson pressure (inverse Poisson) corresponding to 100 Jacobi iterations are found here `data/preprocess/filters/single_poisson_D3_INVERSE_STANDARD_dx_0.9_itr_100.hlsli`. 
+For example, filter values for solving the 3D Poisson pressure (inverse Poisson) corresponding to 100 Jacobi iterations and a cell size of `0.9` are found here `data/preprocess/filters/single_poisson_D3_INVERSE_STANDARD_dx_0.9_itr_100.hlsli`. 
 
 You can also generate new filters with different paramteres than those available in the database. For details see the documentation. 
 
