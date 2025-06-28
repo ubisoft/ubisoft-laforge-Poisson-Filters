@@ -24,6 +24,9 @@ You can also find the paper and its supplements in `docs/paper/`.
 
 You might want to choose which experiments to run in `all_examples.py`.
 
+# Demo Videos
+Visit the ["*project page*"](https://www.shahinrabbani.ca/poissonfilters.html) for the demos and a technical introduction.
+
 # <a name="documentation"></a> Code Documentation
 You can access the documention online available on Git Pages [here](https://shahinrab.github.io/PoissonFilters_Doc/index.html),
 
