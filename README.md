@@ -25,6 +25,10 @@ You can also find the paper and its supplements in `docs/paper/`.
 You might want to choose which experiments to run in `all_examples.py`.
 
 # <a name="documentation"></a> Code Documentation
+You can access the documention online available on Git Pages [here](https://shahinrab.github.io/PoissonFilters_Doc/index.html),
+
+OR
+
 Download the contents of `docs/build` to be able to view and browse the `html` pages properly.
 
 Start with `docs/build/html/index.html`. You will find a quick start on how to run the demos, technical notes and code documentations.
